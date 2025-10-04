@@ -249,7 +249,7 @@
                         </div>
                         <div class="contact-details">
                             <h4>Adresă</h4>
-                            <p>[Adresa Dumneavoastră Aici]<br>str. Ivan Zaikin, 51, Chișinău, MD2005</p>
+                            <p>str. Ivan Zaikin, 51, Chișinău, MD2005</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -274,7 +274,7 @@
                         </div>
                         <div class="contact-details">
                             <h4>Email</h4>
-                            <p>[Adresa Dumneavoastră de Email]</p>
+                            <p>greenenginnering@gmail.com</p>
                         </div>
                     </div>
                 </div>
