@@ -88,7 +88,7 @@ contactForm.addEventListener('submit', function(e) {
     // Show loading state
     const submitBtn = contactForm.querySelector('button[type="submit"]');
     const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Sending...';
+    submitBtn.textContent = 'Se trimite...';
     submitBtn.disabled = true;
     
     // Send form data
@@ -100,16 +100,16 @@ contactForm.addEventListener('submit', function(e) {
     .then(data => {
         if (data.success) {
             // Show success message
-            showMessage('Thank you! Your message has been sent successfully.', 'success');
+            showMessage('Mulțumim! Mesajul dumneavoastră a fost trimis cu succes.', 'success');
             contactForm.reset();
         } else {
             // Show error message
-            showMessage('Sorry, there was an error sending your message. Please try again.', 'error');
+            showMessage('Ne pare rău, a apărut o eroare la trimiterea mesajului. Vă rugăm încercați din nou.', 'error');
         }
     })
     .catch(error => {
         console.error('Error:', error);
-        showMessage('Sorry, there was an error sending your message. Please try again.', 'error');
+        showMessage('Ne pare rău, a apărut o eroare la trimiterea mesajului. Vă rugăm încercați din nou.', 'error');
     })
     .finally(() => {
         // Reset button state

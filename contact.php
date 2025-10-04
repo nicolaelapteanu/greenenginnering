@@ -31,17 +31,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $errors = [];
     
     if (empty($name)) {
-        $errors[] = 'Name is required';
+        $errors[] = 'Numele este obligatoriu';
     }
     
     if (empty($email)) {
-        $errors[] = 'Email is required';
+        $errors[] = 'Email-ul este obligatoriu';
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $errors[] = 'Invalid email format';
+        $errors[] = 'Format de email invalid';
     }
     
     if (empty($message)) {
-        $errors[] = 'Message is required';
+        $errors[] = 'Mesajul este obligatoriu';
     }
     
     // If validation passes
@@ -49,23 +49,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         // TODO: Update these values with your actual contact information
         $to = 'info@greenenginnering.md'; // Your email address
-        $subject = 'New Contact Form Submission - Green Engineering';
+        $subject = 'Nouă Solicitare de Contact - Green Engineering';
         
         // Email body
         $emailBody = "
-New Contact Form Submission
+Nouă Solicitare de Contact
 
-Name: {$name}
+Nume: {$name}
 Email: {$email}
-Phone: {$phone}
+Telefon: {$phone}
 
-Message:
+Mesaj:
 {$message}
 
 ---
-Sent from greenenginnering.md contact form
-Date: " . date('Y-m-d H:i:s') . "
-IP Address: " . $_SERVER['REMOTE_ADDR'] . "
+Trimis din formularul de contact greenenginnering.md
+Data: " . date('Y-m-d H:i:s') . "
+Adresă IP: " . $_SERVER['REMOTE_ADDR'] . "
         ";
         
         // Email headers
@@ -84,9 +84,9 @@ IP Address: " . $_SERVER['REMOTE_ADDR'] . "
             // saveToDatabase($name, $email, $phone, $message);
             
             $response['success'] = true;
-            $response['message'] = 'Thank you for contacting us! We will get back to you soon.';
+            $response['message'] = 'Vă mulțumim că ne-ați contactat! Vă vom răspunde în curând.';
         } else {
-            $response['message'] = 'Failed to send email. Please try again later.';
+            $response['message'] = 'Eroare la trimiterea email-ului. Vă rugăm încercați mai târziu.';
             
             // Log error for debugging
             error_log('Contact form email failed to send');
@@ -97,7 +97,7 @@ IP Address: " . $_SERVER['REMOTE_ADDR'] . "
     }
     
 } else {
-    $response['message'] = 'Invalid request method';
+    $response['message'] = 'Metodă de cerere invalidă';
 }
 
 // Return JSON response

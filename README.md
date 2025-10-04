@@ -1,34 +1,34 @@
-# Green Engineering - Construction Landing Page
+# Green Engineering - Pagină de Prezentare Construcții
 
-A modern, responsive landing page for Green Engineering construction company in the Republic of Moldova.
+O pagină de prezentare modernă și responsivă pentru compania de construcții Green Engineering din Republica Moldova.
 
-## Features
+## Caracteristici
 
-- 🎨 Beautiful, modern design with smooth animations
-- 📱 Fully responsive (mobile, tablet, desktop)
-- 🚀 Fast loading and optimized performance
-- 📧 Working contact form with PHP backend
-- ♿ Accessibility-focused
-- 🔒 Security headers and best practices
-- 🌐 SEO-friendly structure
+- 🎨 Design frumos și modern cu animații fluide
+- 📱 Complet responsiv (mobil, tabletă, desktop)
+- 🚀 Încărcare rapidă și performanță optimizată
+- 📧 Formular de contact funcțional cu backend PHP
+- ♿ Focalizat pe accesibilitate
+- 🔒 Headere de securitate și cele mai bune practici
+- 🌐 Structură prietenoasă SEO
 
-## Technology Stack
+## Stack Tehnologic
 
-- **Frontend:** HTML5, CSS3, Vanilla JavaScript
+- **Frontend:** HTML5, CSS3, JavaScript Vanilla
 - **Backend:** PHP 8.0+
 - **Server:** Apache 2.4+
 
-## Installation
+## Instalare
 
-### 1. Prerequisites
+### 1. Cerințe Preliminare
 
-- Apache server with mod_rewrite enabled
-- PHP 8.0 or higher
-- Mail server configured for PHP mail() function
+- Server Apache cu mod_rewrite activat
+- PHP 8.0 sau mai nou
+- Server de mail configurat pentru funcția mail() din PHP
 
-### 2. Upload Files
+### 2. Încărcare Fișiere
 
-Upload all files to your Apache web root directory (usually `/var/www/html/` or `public_html/`).
+Încărcați toate fișierele în directorul root web Apache (de obicei `/var/www/html/` sau `public_html/`).
 
 ```bash
 /var/www/html/
@@ -42,9 +42,9 @@ Upload all files to your Apache web root directory (usually `/var/www/html/` or 
 └── README.md
 ```
 
-### 3. Configure Apache
+### 3. Configurare Apache
 
-Ensure the following Apache modules are enabled:
+Asigurați-vă că următoarele module Apache sunt activate:
 
 ```bash
 sudo a2enmod rewrite
@@ -54,35 +54,35 @@ sudo a2enmod deflate
 sudo systemctl restart apache2
 ```
 
-### 4. Update Contact Information
+### 4. Actualizare Informații de Contact
 
-#### Update Email Address
-Edit `contact.php` and change the email address on line 42:
+#### Actualizare Adresă Email
+Editați `contact.php` și schimbați adresa de email la linia 51:
 
 ```php
-$to = 'your-email@greenenginnering.md'; // Your actual email address
+$to = 'email-ul-dvs@greenenginnering.md'; // Adresa dvs. reală de email
 ```
 
-#### Update Contact Details in Website
-Edit `index.php` and update the following sections:
+#### Actualizare Detalii de Contact pe Website
+Editați `index.php` și actualizați următoarele secțiuni:
 
-**Contact Section (around line 270):**
+**Secțiunea Contact (în jurul liniei 252):**
 ```html
-<p>[Your Address Here]<br>Chișinău, Republic of Moldova</p>
-<p>[Your Phone Number]</p>
-<p>[Your Email Address]</p>
+<p>[Adresa Dumneavoastră Aici]<br>Chișinău, Republica Moldova</p>
+<p>[Numărul Dumneavoastră de Telefon]</p>
+<p>[Adresa Dumneavoastră de Email]</p>
 ```
 
-**Footer Section (around line 347):**
+**Secțiunea Footer (în jurul liniei 332):**
 ```html
-<li>Chișinău, Republic of Moldova</li>
-<li>[Your Phone Number]</li>
-<li>[Your Email]</li>
+<li>Chișinău, Republica Moldova</li>
+<li>[Numărul Dumneavoastră de Telefon]</li>
+<li>[Email-ul Dumneavoastră]</li>
 ```
 
-### 5. File Permissions
+### 5. Permisiuni Fișiere
 
-Set appropriate permissions:
+Setați permisiunile corespunzătoare:
 
 ```bash
 chmod 644 index.php contact.php .htaccess
@@ -91,84 +91,84 @@ chmod 644 js/script.js
 chmod 755 css/ js/
 ```
 
-## Configuration
+## Configurare
 
-### Email Configuration
+### Configurare Email
 
-The contact form uses PHP's built-in `mail()` function. Ensure your server has a working mail configuration.
+Formularul de contact utilizează funcția `mail()` incorporată în PHP. Asigurați-vă că serverul dvs. are o configurare de mail funcțională.
 
-**For better email delivery, consider:**
-- Configuring SMTP in PHP
-- Using services like SendGrid or Amazon SES
-- Setting up SPF and DKIM records for your domain
+**Pentru o livrare mai bună a email-urilor, considerați:**
+- Configurarea SMTP în PHP
+- Utilizarea serviciilor precum SendGrid sau Amazon SES
+- Configurarea înregistrărilor SPF și DKIM pentru domeniul dvs.
 
-### Security
+### Securitate
 
-The included `.htaccess` file provides:
-- Security headers (X-Frame-Options, XSS-Protection, etc.)
-- File protection (hiding sensitive files)
-- Performance optimization (gzip, caching)
+Fișierul `.htaccess` inclus oferă:
+- Headere de securitate (X-Frame-Options, XSS-Protection, etc.)
+- Protecție fișiere (ascunderea fișierelor sensibile)
+- Optimizare performanță (gzip, caching)
 
-**Additional security recommendations:**
-1. Enable HTTPS/SSL certificate
-2. Uncomment HTTPS redirect in `.htaccess` after SSL is configured
-3. Configure firewall rules
-4. Regular security updates
-5. Implement rate limiting on contact form
+**Recomandări suplimentare de securitate:**
+1. Activați certificatul HTTPS/SSL
+2. Decomentați redirectarea HTTPS în `.htaccess` după configurarea SSL
+3. Configurați regulile firewall
+4. Actualizări regulate de securitate
+5. Implementați limitare de rata pentru formularul de contact
 
-### Performance Optimization
+### Optimizare Performanță
 
-The site is already optimized with:
-- Minified CSS animations
-- Efficient JavaScript (no jQuery dependency)
-- Browser caching headers
-- Gzip compression
+Site-ul este deja optimizat cu:
+- Animații CSS minificate
+- JavaScript eficient (fără dependență jQuery)
+- Headere de caching pentru browser
+- Compresie Gzip
 
-**Additional improvements:**
-- Use a CDN for fonts
-- Implement lazy loading for images when you add real photos
-- Consider using WebP format for images
+**Îmbunătățiri suplimentare:**
+- Utilizați un CDN pentru fonturi
+- Implementați încărcare lazy pentru imagini când adăugați fotografii reale
+- Considerați utilizarea formatului WebP pentru imagini
 
-## Customization
+## Personalizare
 
-### Changing Colors
+### Schimbarea Culorilor
 
-Edit `css/style.css` and modify the CSS variables at the top:
+Editați `css/style.css` și modificați variabilele CSS de la început:
 
 ```css
 :root {
-    --primary-green: #2d5f3f;     /* Main green color */
-    --accent-gold: #d4af37;       /* Accent gold color */
-    --text-dark: #1a1a1a;         /* Dark text */
-    --text-light: #666;           /* Light text */
+    --primary-green: #2d5f3f;     /* Culoarea principală verde */
+    --accent-gold: #d4af37;       /* Culoarea accent auriu */
+    --text-dark: #1a1a1a;         /* Text întunecat */
+    --text-light: #666;           /* Text deschis */
 }
 ```
 
-### Adding Real Images
+### Adăugare Imagini Reale
 
-Replace the placeholder SVGs in `index.php` with real images:
+Înlocuiți SVG-urile placeholder din `index.php` cu imagini reale:
 
-1. Create an `images/` directory
-2. Upload your images
-3. Replace the placeholder divs with `<img>` tags
+1. Creați un director `images/`
+2. Încărcați imaginile dvs.
+3. Înlocuiți div-urile placeholder cu tag-uri `<img>`
 
-Example:
+Exemplu:
 ```html
-<!-- Before -->
+<!-- Înainte -->
 <div class="placeholder-image">
     <svg>...</svg>
 </div>
 
-<!-- After -->
-<img src="images/project1.jpg" alt="Project Name">
+<!-- După -->
+<img src="images/proiect1.jpg" alt="Nume Proiect">
 ```
 
-### Adding Database Support
+### Adăugare Suport Bază de Date
 
-To save contact form submissions to a database:
+Pentru a salva trimiterile formularului de contact într-o bază de date:
 
-1. Create a MySQL database
-2. Create a table:
+1. Creați o bază de date MySQL
+2. Creați o tabelă:
 
 ```sql
 CREATE TABLE contact_submissions (
@@ -183,66 +183,66 @@ CREATE TABLE contact_submissions (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 ```
 
-3. Uncomment and configure the `saveToDatabase()` function in `contact.php`
+3. Decomentați și configurați funcția `saveToDatabase()` în `contact.php`
 
-## Sections
+## Secțiuni
 
-The landing page includes:
+Pagina de prezentare include:
 
-1. **Navigation** - Sticky header with smooth scroll
-2. **Hero Section** - Eye-catching introduction
-3. **Services** - 6 core service offerings
-4. **About** - Company information and statistics
-5. **Projects** - Featured project showcase
-6. **Contact** - Contact form and information
-7. **Footer** - Quick links and site information
+1. **Navigare** - Header fix cu scroll fluid
+2. **Secțiune Hero** - Introducere atrăgătoare
+3. **Servicii** - 6 servicii principale oferite
+4. **Despre** - Informații despre companie și statistici
+5. **Proiecte** - Prezentare proiecte de referință
+6. **Contact** - Formular de contact și informații
+7. **Footer** - Link-uri rapide și informații site
 
-## Browser Support
+## Suport Browsere
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Opera (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
+- Chrome (ultima versiune)
+- Firefox (ultima versiune)
+- Safari (ultima versiune)
+- Edge (ultima versiune)
+- Opera (ultima versiune)
+- Browsere mobile (iOS Safari, Chrome Mobile)
 
-## Troubleshooting
+## Depanare
 
-### Contact form not sending emails
+### Formularul de contact nu trimite email-uri
 
-1. Check PHP mail configuration: `php -i | grep mail`
-2. Check server mail logs: `/var/log/mail.log`
-3. Verify email address in `contact.php`
-4. Test with a simple PHP mail script
+1. Verificați configurarea mail PHP: `php -i | grep mail`
+2. Verificați logurile mail server: `/var/log/mail.log`
+3. Verificați adresa de email în `contact.php`
+4. Testați cu un script PHP simplu de mail
 
-### CSS/JS not loading
+### CSS/JS nu se încarcă
 
-1. Check file permissions
-2. Verify file paths in `index.php`
-3. Check Apache error logs: `/var/log/apache2/error.log`
-4. Clear browser cache
+1. Verificați permisiunile fișierelor
+2. Verificați căile fișierelor în `index.php`
+3. Verificați logurile de eroare Apache: `/var/log/apache2/error.log`
+4. Curățați cache-ul browserului
 
-### .htaccess causing 500 error
+### .htaccess cauzează eroare 500
 
-1. Verify Apache modules are enabled
-2. Check Apache error logs
-3. Comment out sections in `.htaccess` to isolate the issue
+1. Verificați că modulele Apache sunt activate
+2. Verificați logurile de eroare Apache
+3. Comentați secțiuni în `.htaccess` pentru a izola problema
 
-## Support
+## Suport
 
-For questions or issues:
-- Check Apache error logs: `/var/log/apache2/error.log`
-- Check PHP error logs: `/var/log/php_errors.log`
-- Verify file permissions and ownership
+Pentru întrebări sau probleme:
+- Verificați logurile de eroare Apache: `/var/log/apache2/error.log`
+- Verificați logurile de eroare PHP: `/var/log/php_errors.log`
+- Verificați permisiunile și ownership-ul fișierelor
 
-## License
+## Licență
 
-This project is provided as-is for Green Engineering (greenenginnering.md).
+Acest proiect este furnizat ca atare pentru Green Engineering (greenenginnering.md).
 
-## Version
+## Versiune
 
-Version 1.0.0 - October 2025
+Versiunea 1.0.0 - Octombrie 2025
 
 ---
 
-**Built with ❤️ for Green Engineering**
+**Construit cu ❤️ pentru Green Engineering**

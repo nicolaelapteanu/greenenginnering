@@ -3,12 +3,12 @@
 // Compatible with PHP 8.0+
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Green Engineering - Premium construction services in the Republic of Moldova. Quality, reliability, and innovation in every project.">
-    <title>Green Engineering - Construction Services in Moldova</title>
+    <meta name="description" content="Green Engineering - Servicii premium de construcții în Republica Moldova. Calitate, fiabilitate și inovație în fiecare proiect.">
+    <title>Green Engineering - Servicii de Construcții în Moldova</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,10 +23,10 @@
                     <span class="logo-green">Green</span><span class="logo-eng">Engineering</span>
                 </a>
                 <div class="nav-menu" id="navMenu">
-                    <a href="#home" class="nav-link">Home</a>
-                    <a href="#services" class="nav-link">Services</a>
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#home" class="nav-link">Acasă</a>
+                    <a href="#services" class="nav-link">Servicii</a>
+                    <a href="#about" class="nav-link">Despre Noi</a>
+                    <a href="#projects" class="nav-link">Proiecte</a>
                     <a href="#contact" class="nav-link">Contact</a>
                 </div>
                 <button class="nav-toggle" id="navToggle">
@@ -43,11 +43,11 @@
         <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title fade-in">Building Tomorrow's Moldova</h1>
-                <p class="hero-subtitle fade-in-delay-1">Premium construction services combining innovation, quality, and sustainability</p>
+                <h1 class="hero-title fade-in">Construim Moldova de Mâine</h1>
+                <p class="hero-subtitle fade-in-delay-1">Servicii premium de construcții ce combină inovația, calitatea și sustenabilitatea</p>
                 <div class="hero-buttons fade-in-delay-2">
-                    <a href="#contact" class="btn btn-primary">Get a Quote</a>
-                    <a href="#projects" class="btn btn-secondary">View Projects</a>
+                    <a href="#contact" class="btn btn-primary">Solicită Ofertă</a>
+                    <a href="#projects" class="btn btn-secondary">Vezi Proiectele</a>
                 </div>
             </div>
         </div>
@@ -60,8 +60,8 @@
     <section id="services" class="services">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Our Services</h2>
-                <p class="section-subtitle">Comprehensive construction solutions for every need</p>
+                <h2 class="section-title">Serviciile Noastre</h2>
+                <p class="section-subtitle">Soluții complete de construcții pentru fiecare necesitate</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
@@ -72,8 +72,8 @@
                             <rect x="24" y="40" width="16" height="16" fill="currentColor"/>
                         </svg>
                     </div>
-                    <h3 class="service-title">Residential Construction</h3>
-                    <p class="service-description">Custom homes and residential complexes built to the highest standards of quality and comfort.</p>
+                    <h3 class="service-title">Construcții Rezidențiale</h3>
+                    <p class="service-description">Case personalizate și complexe rezidențiale construite conform celor mai înalte standarde de calitate și confort.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
@@ -84,8 +84,8 @@
                             <rect x="20" y="44" width="8" height="12" fill="currentColor"/>
                         </svg>
                     </div>
-                    <h3 class="service-title">Commercial Buildings</h3>
-                    <p class="service-description">Modern office spaces, retail centers, and commercial facilities designed for success.</p>
+                    <h3 class="service-title">Clădiri Comerciale</h3>
+                    <p class="service-description">Spații moderne de birouri, centre comerciale și facilități comerciale proiectate pentru succes.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
@@ -94,8 +94,8 @@
                             <path d="M32 12V32L44 44" stroke="currentColor" stroke-width="3"/>
                         </svg>
                     </div>
-                    <h3 class="service-title">Project Management</h3>
-                    <p class="service-description">End-to-end project coordination ensuring timely delivery and budget compliance.</p>
+                    <h3 class="service-title">Management de Proiect</h3>
+                    <p class="service-description">Coordonare completă a proiectelor asigurând livrarea la timp și respectarea bugetului.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
@@ -105,8 +105,8 @@
                             <path d="M8 24L32 32L56 24" stroke="currentColor" stroke-width="3"/>
                         </svg>
                     </div>
-                    <h3 class="service-title">Renovation & Remodeling</h3>
-                    <p class="service-description">Transform existing spaces with expert renovation and modernization services.</p>
+                    <h3 class="service-title">Renovare & Remodelare</h3>
+                    <p class="service-description">Transformăm spațiile existente cu servicii experte de renovare și modernizare.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
@@ -116,8 +116,8 @@
                             <circle cx="32" cy="42" r="4" fill="currentColor"/>
                         </svg>
                     </div>
-                    <h3 class="service-title">Infrastructure Development</h3>
-                    <p class="service-description">Roads, bridges, and essential infrastructure for community development.</p>
+                    <h3 class="service-title">Dezvoltare Infrastructură</h3>
+                    <p class="service-description">Drumuri, poduri și infrastructură esențială pentru dezvoltarea comunității.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
@@ -126,8 +126,8 @@
                             <circle cx="32" cy="28" r="3" fill="currentColor"/>
                         </svg>
                     </div>
-                    <h3 class="service-title">Green Building Solutions</h3>
-                    <p class="service-description">Sustainable, eco-friendly construction with energy-efficient designs and materials.</p>
+                    <h3 class="service-title">Soluții de Construcții Ecologice</h3>
+                    <p class="service-description">Construcții durabile și ecologice cu design și materiale eficiente energetic.</p>
                 </div>
             </div>
         </div>
@@ -138,29 +138,29 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-content">
-                    <h2 class="section-title">About Green Engineering</h2>
+                    <h2 class="section-title">Despre Green Engineering</h2>
                     <p class="about-text">
-                        With years of experience in the construction industry, Green Engineering has become a trusted name 
-                        in the Republic of Moldova. We pride ourselves on delivering exceptional quality, innovative solutions, 
-                        and sustainable building practices.
+                        Cu ani de experiență în industria construcțiilor, Green Engineering a devenit un nume de încredere 
+                        în Republica Moldova. Ne mândrim cu livrarea unei calități excepționale, soluții inovatoare 
+                        și practici de construcție durabile.
                     </p>
                     <p class="about-text">
-                        Our team of skilled professionals combines traditional craftsmanship with modern technology to create 
-                        structures that stand the test of time. From concept to completion, we're committed to exceeding 
-                        your expectations.
+                        Echipa noastră de profesioniști calificați combină meșteșugul tradițional cu tehnologia modernă pentru a crea 
+                        structuri care rezistă testului timpului. De la concept până la finalizare, ne angajăm să depășim 
+                        așteptările dumneavoastră.
                     </p>
                     <div class="about-stats">
                         <div class="stat">
                             <div class="stat-number">500+</div>
-                            <div class="stat-label">Projects Completed</div>
+                            <div class="stat-label">Proiecte Finalizate</div>
                         </div>
                         <div class="stat">
                             <div class="stat-number">15+</div>
-                            <div class="stat-label">Years Experience</div>
+                            <div class="stat-label">Ani de Experiență</div>
                         </div>
                         <div class="stat">
                             <div class="stat-number">98%</div>
-                            <div class="stat-label">Client Satisfaction</div>
+                            <div class="stat-label">Satisfacția Clienților</div>
                         </div>
                     </div>
                 </div>
@@ -181,8 +181,8 @@
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">Showcasing our commitment to excellence</p>
+                <h2 class="section-title">Proiecte de Referință</h2>
+                <p class="section-subtitle">Demonstrăm angajamentul nostru față de excelență</p>
             </div>
             <div class="projects-grid">
                 <div class="project-card">
@@ -195,8 +195,8 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3 class="project-title">Modern Residential Complex</h3>
-                        <p class="project-description">120-unit luxury apartment building in Chișinău</p>
+                        <h3 class="project-title">Complex Rezidențial Modern</h3>
+                        <p class="project-description">Clădire de apartamente de lux cu 120 de unități în Chișinău</p>
                     </div>
                 </div>
                 <div class="project-card">
@@ -209,8 +209,8 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3 class="project-title">Commercial Office Center</h3>
-                        <p class="project-description">15,000 sqm state-of-the-art office space</p>
+                        <h3 class="project-title">Centru de Birouri Comerciale</h3>
+                        <p class="project-description">Spațiu modern de birouri de 15.000 mp</p>
                     </div>
                 </div>
                 <div class="project-card">
@@ -223,8 +223,8 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3 class="project-title">Sustainable Family Home</h3>
-                        <p class="project-description">Eco-friendly villa with solar panels and green technology</p>
+                        <h3 class="project-title">Casă de Familie Durabilă</h3>
+                        <p class="project-description">Vilă ecologică cu panouri solare și tehnologie verde</p>
                     </div>
                 </div>
             </div>
@@ -235,8 +235,8 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Let's discuss your next project</p>
+                <h2 class="section-title">Contactați-ne</h2>
+                <p class="section-subtitle">Să discutăm despre următorul dumneavoastră proiect</p>
             </div>
             <div class="contact-grid">
                 <div class="contact-info">
@@ -248,8 +248,8 @@
                             </svg>
                         </div>
                         <div class="contact-details">
-                            <h4>Address</h4>
-                            <p>[Your Address Here]<br>Chișinău, Republic of Moldova</p>
+                            <h4>Adresă</h4>
+                            <p>[Adresa Dumneavoastră Aici]<br>str. Ivan Zaikin, 51, Chișinău, MD2005</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -261,8 +261,8 @@
                             </svg>
                         </div>
                         <div class="contact-details">
-                            <h4>Phone</h4>
-                            <p>[Your Phone Number]</p>
+                            <h4>Telefon</h4>
+                            <p>+37360009003</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -274,25 +274,25 @@
                         </div>
                         <div class="contact-details">
                             <h4>Email</h4>
-                            <p>[Your Email Address]</p>
+                            <p>[Adresa Dumneavoastră de Email]</p>
                         </div>
                     </div>
                 </div>
                 <div class="contact-form-wrapper">
                     <form id="contactForm" class="contact-form" method="post" action="contact.php">
                         <div class="form-group">
-                            <input type="text" name="name" id="name" class="form-input" placeholder="Your Name" required>
+                            <input type="text" name="name" id="name" class="form-input" placeholder="Numele Dumneavoastră" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" id="email" class="form-input" placeholder="Your Email" required>
+                            <input type="email" name="email" id="email" class="form-input" placeholder="Email-ul Dumneavoastră" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" name="phone" id="phone" class="form-input" placeholder="Your Phone">
+                            <input type="tel" name="phone" id="phone" class="form-input" placeholder="Numarul dumneavoastra de telefon">
                         </div>
                         <div class="form-group">
-                            <textarea name="message" id="message" class="form-input" rows="5" placeholder="Your Message" required></textarea>
+                            <textarea name="message" id="message" class="form-input" rows="5" placeholder="Mesajul Dumneavoastră" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                        <button type="submit" class="btn btn-primary btn-block">Trimite Mesajul</button>
                     </form>
                 </div>
             </div>
@@ -305,38 +305,38 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3 class="footer-logo"><span class="logo-green">Green</span><span class="logo-eng">Engineering</span></h3>
-                    <p class="footer-text">Building a better tomorrow through quality construction and sustainable practices.</p>
+                    <p class="footer-text">Construim un viitor mai bun prin construcții de calitate și practici durabile.</p>
                 </div>
                 <div class="footer-section">
-                    <h4 class="footer-title">Quick Links</h4>
+                    <h4 class="footer-title">Link-uri Rapide</h4>
                     <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#home">Acasă</a></li>
+                        <li><a href="#services">Servicii</a></li>
+                        <li><a href="#about">Despre Noi</a></li>
+                        <li><a href="#projects">Proiecte</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4 class="footer-title">Services</h4>
+                    <h4 class="footer-title">Servicii</h4>
                     <ul class="footer-links">
-                        <li><a href="#services">Residential Construction</a></li>
-                        <li><a href="#services">Commercial Buildings</a></li>
-                        <li><a href="#services">Project Management</a></li>
-                        <li><a href="#services">Renovation</a></li>
+                        <li><a href="#services">Construcții Rezidențiale</a></li>
+                        <li><a href="#services">Clădiri Comerciale</a></li>
+                        <li><a href="#services">Management de Proiect</a></li>
+                        <li><a href="#services">Renovare</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4 class="footer-title">Contact Info</h4>
+                    <h4 class="footer-title">Informații Contact</h4>
                     <ul class="footer-links">
-                        <li>Chișinău, Republic of Moldova</li>
-                        <li>[Your Phone Number]</li>
-                        <li>[Your Email]</li>
+                        <li>str. Ivan Zaikin, 51, Chișinău, MD2005</li>
+                        <li>+37360009003</li>
+                        <li>greenenginnering@gmail.com</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <?php echo date('Y'); ?> Green Engineering. All rights reserved.</p>
+                <p>&copy; <?php echo date('Y'); ?> Green Engineering. Toate drepturile rezervate.</p>
             </div>
         </div>
     </footer>
