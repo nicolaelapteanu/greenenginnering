@@ -1,248 +1,125 @@
-# Green Engineering - Pagină de Prezentare Construcții
+# Green Engineering - Static Website
 
-O pagină de prezentare modernă și responsivă pentru compania de construcții Green Engineering din Republica Moldova.
+A modern, responsive landing page for Green Engineering construction services in Moldova.
 
-## Caracteristici
+## 🌟 Features
 
-- 🎨 Design frumos și modern cu animații fluide
-- 📱 Complet responsiv (mobil, tabletă, desktop)
-- 🚀 Încărcare rapidă și performanță optimizată
-- 📧 Formular de contact funcțional cu backend PHP
-- ♿ Focalizat pe accesibilitate
-- 🔒 Headere de securitate și cele mai bune practici
-- 🌐 Structură prietenoasă SEO
+- **Fully Responsive Design** - Works perfectly on all devices
+- **Modern UI/UX** - Clean, professional design with smooth animations
+- **Static HTML/CSS/JS** - No backend required, perfect for GitHub Pages
+- **SEO Optimized** - Meta tags and semantic HTML structure
+- **Fast Loading** - Optimized assets and minimal dependencies
 
-## Stack Tehnologic
+## 📁 Project Structure
 
-- **Frontend:** HTML5, CSS3, JavaScript Vanilla
-- **Backend:** PHP 8.0+
-- **Server:** Apache 2.4+
-
-## Instalare
-
-### 1. Cerințe Preliminare
-
-- Server Apache cu mod_rewrite activat
-- PHP 8.0 sau mai nou
-- Server de mail configurat pentru funcția mail() din PHP
-
-### 2. Încărcare Fișiere
-
-Încărcați toate fișierele în directorul root web Apache (de obicei `/var/www/html/` sau `public_html/`).
-
-```bash
-/var/www/html/
-├── index.php
-├── contact.php
-├── .htaccess
+```
+greenenginnering/
+├── index.html          # Main landing page
 ├── css/
-│   └── style.css
+│   └── style.css      # All styles
 ├── js/
-│   └── script.js
-└── README.md
+│   └── script.js      # Interactive features
+└── README.md          # This file
 ```
 
-### 3. Configurare Apache
+## 🚀 Deploying to GitHub Pages
 
-Asigurați-vă că următoarele module Apache sunt activate:
+### Option 1: Deploy from Main Branch
 
-```bash
-sudo a2enmod rewrite
-sudo a2enmod headers
-sudo a2enmod expires
-sudo a2enmod deflate
-sudo systemctl restart apache2
-```
+1. **Push your code to GitHub:**
+   ```bash
+   git add .
+   git commit -m "Add static website"
+   git push origin main
+   ```
 
-### 4. Actualizare Informații de Contact
+2. **Enable GitHub Pages:**
+   - Go to your repository on GitHub
+   - Click on **Settings** tab
+   - Scroll down to **Pages** section (in the left sidebar)
+   - Under **Source**, select `main` branch
+   - Select `/ (root)` as the folder
+   - Click **Save**
 
-#### Actualizare Adresă Email
-Editați `contact.php` și schimbați adresa de email la linia 51:
+3. **Access your site:**
+   - Your site will be live at: `https://yourusername.github.io/greenenginnering/`
+   - It may take a few minutes for the site to go live
 
-```php
-$to = 'email-ul-dvs@greenenginnering.md'; // Adresa dvs. reală de email
-```
+### Option 2: Using GitHub Desktop
 
-#### Actualizare Detalii de Contact pe Website
-Editați `index.php` și actualizați următoarele secțiuni:
+1. Open GitHub Desktop
+2. Add the repository
+3. Commit all changes
+4. Push to origin
+5. Follow steps 2-3 from Option 1
 
-**Secțiunea Contact (în jurul liniei 252):**
+## 🛠️ Customization
+
+### Updating Contact Information
+
+Edit the contact section in `index.html`:
+
 ```html
-<p>[Adresa Dumneavoastră Aici]<br>Chișinău, Republica Moldova</p>
-<p>[Numărul Dumneavoastră de Telefon]</p>
-<p>[Adresa Dumneavoastră de Email]</p>
+<!-- Around line 270 -->
+<p>str. Ivan Zaikin, 51, Chișinău, MD2005</p>
+<p><a href="tel:+37360009003">+37360009003</a></p>
+<p><a href="mailto:greenengineering@gmail.com">greenengineering@gmail.com</a></p>
 ```
 
-**Secțiunea Footer (în jurul liniei 332):**
-```html
-<li>Chișinău, Republica Moldova</li>
-<li>[Numărul Dumneavoastră de Telefon]</li>
-<li>[Email-ul Dumneavoastră]</li>
-```
+### Changing Colors
 
-### 5. Permisiuni Fișiere
-
-Setați permisiunile corespunzătoare:
-
-```bash
-chmod 644 index.php contact.php .htaccess
-chmod 644 css/style.css
-chmod 644 js/script.js
-chmod 755 css/ js/
-```
-
-## Configurare
-
-### Configurare Email
-
-Formularul de contact utilizează funcția `mail()` incorporată în PHP. Asigurați-vă că serverul dvs. are o configurare de mail funcțională.
-
-**Pentru o livrare mai bună a email-urilor, considerați:**
-- Configurarea SMTP în PHP
-- Utilizarea serviciilor precum SendGrid sau Amazon SES
-- Configurarea înregistrărilor SPF și DKIM pentru domeniul dvs.
-
-### Securitate
-
-Fișierul `.htaccess` inclus oferă:
-- Headere de securitate (X-Frame-Options, XSS-Protection, etc.)
-- Protecție fișiere (ascunderea fișierelor sensibile)
-- Optimizare performanță (gzip, caching)
-
-**Recomandări suplimentare de securitate:**
-1. Activați certificatul HTTPS/SSL
-2. Decomentați redirectarea HTTPS în `.htaccess` după configurarea SSL
-3. Configurați regulile firewall
-4. Actualizări regulate de securitate
-5. Implementați limitare de rata pentru formularul de contact
-
-### Optimizare Performanță
-
-Site-ul este deja optimizat cu:
-- Animații CSS minificate
-- JavaScript eficient (fără dependență jQuery)
-- Headere de caching pentru browser
-- Compresie Gzip
-
-**Îmbunătățiri suplimentare:**
-- Utilizați un CDN pentru fonturi
-- Implementați încărcare lazy pentru imagini când adăugați fotografii reale
-- Considerați utilizarea formatului WebP pentru imagini
-
-## Personalizare
-
-### Schimbarea Culorilor
-
-Editați `css/style.css` și modificați variabilele CSS de la început:
+Edit CSS variables in `css/style.css`:
 
 ```css
 :root {
-    --primary-green: #2d5f3f;     /* Culoarea principală verde */
-    --accent-gold: #d4af37;       /* Culoarea accent auriu */
-    --text-dark: #1a1a1a;         /* Text întunecat */
-    --text-light: #666;           /* Text deschis */
+    --primary-green: #2d5f3f;
+    --primary-green-light: #3a7850;
+    --primary-green-dark: #1e3f2a;
+    --accent-gold: #d4af37;
+    /* ... */
 }
 ```
 
-### Adăugare Imagini Reale
+### Adding Images
 
-Înlocuiți SVG-urile placeholder din `index.php` cu imagini reale:
+Replace the placeholder SVGs with real images:
 
-1. Creați un director `images/`
-2. Încărcați imaginile dvs.
-3. Înlocuiți div-urile placeholder cu tag-uri `<img>`
+1. Add images to an `images/` folder
+2. Replace the SVG placeholders in `index.html` with:
+   ```html
+   <img src="images/your-image.jpg" alt="Description">
+   ```
 
-Exemplu:
-```html
-<!-- Înainte -->
-<div class="placeholder-image">
-    <svg>...</svg>
-</div>
+## 📱 Sections
 
-<!-- După -->
-<img src="images/proiect1.jpg" alt="Nume Proiect">
-```
+- **Hero** - Eye-catching landing section with call-to-action
+- **Services** - 6 key service offerings
+- **About** - Company information and statistics
+- **Contact** - Contact information and details
+- **Footer** - Quick links and additional info
 
-### Adăugare Suport Bază de Date
+## 🌐 Browser Support
 
-Pentru a salva trimiterile formularului de contact într-o bază de date:
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers
 
-1. Creați o bază de date MySQL
-2. Creați o tabelă:
+## 📝 License
 
-```sql
-CREATE TABLE contact_submissions (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL,
-    phone VARCHAR(20),
-    message TEXT NOT NULL,
-    submitted_at DATETIME NOT NULL,
-    ip_address VARCHAR(45),
-    INDEX idx_submitted_at (submitted_at)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-```
+© 2024 Green Engineering. All rights reserved.
 
-3. Decomentați și configurați funcția `saveToDatabase()` în `contact.php`
+## 🔧 Technical Notes
 
-## Secțiuni
+- No build process required
+- Pure HTML/CSS/JavaScript
+- Uses Google Fonts (Poppins & Roboto)
+- Intersection Observer API for scroll animations
+- CSS Grid and Flexbox for layouts
+- Mobile-first responsive design
 
-Pagina de prezentare include:
+## 📞 Support
 
-1. **Navigare** - Header fix cu scroll fluid
-2. **Secțiune Hero** - Introducere atrăgătoare
-3. **Servicii** - 6 servicii principale oferite
-4. **Despre** - Informații despre companie și statistici
-5. **Proiecte** - Prezentare proiecte de referință
-6. **Contact** - Formular de contact și informații
-7. **Footer** - Link-uri rapide și informații site
+For any questions or issues, contact: greenengineering@gmail.com
 
-## Suport Browsere
-
-- Chrome (ultima versiune)
-- Firefox (ultima versiune)
-- Safari (ultima versiune)
-- Edge (ultima versiune)
-- Opera (ultima versiune)
-- Browsere mobile (iOS Safari, Chrome Mobile)
-
-## Depanare
-
-### Formularul de contact nu trimite email-uri
-
-1. Verificați configurarea mail PHP: `php -i | grep mail`
-2. Verificați logurile mail server: `/var/log/mail.log`
-3. Verificați adresa de email în `contact.php`
-4. Testați cu un script PHP simplu de mail
-
-### CSS/JS nu se încarcă
-
-1. Verificați permisiunile fișierelor
-2. Verificați căile fișierelor în `index.php`
-3. Verificați logurile de eroare Apache: `/var/log/apache2/error.log`
-4. Curățați cache-ul browserului
-
-### .htaccess cauzează eroare 500
-
-1. Verificați că modulele Apache sunt activate
-2. Verificați logurile de eroare Apache
-3. Comentați secțiuni în `.htaccess` pentru a izola problema
-
-## Suport
-
-Pentru întrebări sau probleme:
-- Verificați logurile de eroare Apache: `/var/log/apache2/error.log`
-- Verificați logurile de eroare PHP: `/var/log/php_errors.log`
-- Verificați permisiunile și ownership-ul fișierelor
-
-## Licență
-
-Acest proiect este furnizat ca atare pentru Green Engineering (greenenginnering.md).
-
-## Versiune
-
-Versiunea 1.0.0 - Octombrie 2025
-
----
-
-**Construit cu ❤️ pentru Green Engineering**

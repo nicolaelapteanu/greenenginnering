@@ -274,7 +274,7 @@
                         </div>
                         <div class="contact-details">
                             <h4>Email</h4>
-                            <p>greenenginnering@gmail.com</p>
+                            <p>greenengineering@gmail.com</p>
                         </div>
                     </div>
                 </div>
@@ -331,7 +331,7 @@
                     <ul class="footer-links">
                         <li>str. Ivan Zaikin, 51, Chișinău, MD2005</li>
                         <li>+37360009003</li>
-                        <li>greenenginnering@gmail.com</li>
+                        <li>greenengineering@gmail.com</li>
                     </ul>
                 </div>
             </div>

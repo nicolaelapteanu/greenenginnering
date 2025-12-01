@@ -1,7 +1,7 @@
 <?php
 /**
  * Contact Form Handler
- * Green Engineering - greenenginnering.md
+ * Green Engineering - greenengineering.md
  * PHP 8.0 Compatible
  */
 
@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($errors)) {
         
         // TODO: Update these values with your actual contact information
-        $to = 'info@greenenginnering.md'; // Your email address
+        $to = 'nicolae.lapteanu@gmail.com'; // Your email address
         $subject = 'Nouă Solicitare de Contact - Green Engineering';
         
         // Email body
@@ -63,14 +63,14 @@ Mesaj:
 {$message}
 
 ---
-Trimis din formularul de contact greenenginnering.md
+Trimis din formularul de contact greenengineering.md
 Data: " . date('Y-m-d H:i:s') . "
 Adresă IP: " . $_SERVER['REMOTE_ADDR'] . "
         ";
         
         // Email headers
         $headers = [
-            'From: noreply@greenenginnering.md',
+            'From: noreply@greenengineering.md',
             'Reply-To: ' . $email,
             'X-Mailer: PHP/' . phpversion(),
             'Content-Type: text/plain; charset=UTF-8'
