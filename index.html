@@ -3,205 +3,195 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Green Engineering - Servicii premium de construcții în Republica Moldova.">
-<title>Green Engineering</title>
+<meta name="description" content="Green Engineering — idei și soluții. Servicii premium de construcții în Republica Moldova.">
+<title>Green Engineering — idei și soluții</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --green:#1a5c32;
-  --green-mid:#2d7a47;
-  --green-light:#e8f5ed;
-  --green-pale:#f4faf6;
-  --gold:#c8a84b;
-  --gold-light:#f5e9c8;
-  --dark:#0f1a13;
-  --text:#1c2b22;
-  --text-muted:#5a7060;
-  --border:#d4e4d9;
-  --white:#fff;
-  --ff-display:'Playfair Display',serif;
-  --ff-body:'DM Sans',sans-serif;
-  --radius:4px;
-  --radius-lg:12px;
-  --shadow:0 2px 24px rgba(15,26,19,.08);
-  --shadow-lg:0 8px 48px rgba(15,26,19,.14);
+  --lime:#8dc63f;
+  --lime-dark:#70a030;
+  --lime-pale:#f0f8e6;
+  --lime-light:#d8eea8;
+  --near-black:#1a1a1a;
+  --dark:#111111;
+  --white:#ffffff;
+  --off-white:#f7f7f5;
+  --text:#1a1a1a;
+  --text-muted:#666666;
+  --border:#e2e2e2;
+  --ff:'Inter',system-ui,sans-serif;
+  --radius:3px;
+  --radius-lg:10px;
+  --shadow:0 2px 20px rgba(0,0,0,.07);
+  --shadow-lg:0 8px 40px rgba(0,0,0,.13);
 }
 html{scroll-behavior:smooth}
-body{font-family:var(--ff-body);color:var(--text);background:var(--white);overflow-x:hidden;font-size:16px;line-height:1.65}
+body{font-family:var(--ff);color:var(--text);background:var(--white);overflow-x:hidden;font-size:16px;line-height:1.6}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
-.container{max-width:1160px;margin:0 auto;padding:0 24px}
+.container{max-width:1160px;margin:0 auto;padding:0 28px}
 
-/* ── LANG SWITCHER ── */
-.lang-bar{background:var(--dark);padding:8px 0}
+/* LANG BAR */
+.lang-bar{background:var(--near-black);padding:9px 0}
 .lang-bar .container{display:flex;justify-content:flex-end;gap:6px}
-.lang-btn{background:none;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);font-family:var(--ff-body);font-size:12px;font-weight:500;letter-spacing:.06em;padding:4px 12px;border-radius:20px;cursor:pointer;transition:all .2s}
-.lang-btn.active,.lang-btn:hover{background:var(--gold);border-color:var(--gold);color:var(--dark)}
+.lang-btn{background:none;border:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.55);font-family:var(--ff);font-size:11px;font-weight:500;letter-spacing:.08em;padding:4px 13px;border-radius:20px;cursor:pointer;transition:all .2s;text-transform:uppercase}
+.lang-btn.active,.lang-btn:hover{background:var(--lime);border-color:var(--lime);color:var(--dark)}
 [data-lang]{display:none}
 [data-lang].active{display:block}
 span[data-lang].active{display:inline}
 
-/* ── NAV ── */
-.navbar{position:fixed;top:36px;left:0;right:0;z-index:100;transition:all .35s}
-.navbar.scrolled{top:0;background:rgba(15,26,19,.97);backdrop-filter:blur(12px)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:20px 0}
-.logo{font-family:var(--ff-display);font-size:22px;font-weight:700;color:var(--white);letter-spacing:.01em}
-.logo span{color:var(--gold)}
-.nav-links{display:flex;gap:36px;list-style:none}
-.nav-links a{color:rgba(255,255,255,.85);font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;transition:color .2s;position:relative;padding-bottom:4px}
-.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width .25s}
+/* NAVBAR */
+.navbar{position:fixed;top:38px;left:0;right:0;z-index:100;transition:all .3s}
+.navbar.scrolled{top:0;background:rgba(17,17,17,.97);backdrop-filter:blur(14px)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.logo-block{display:flex;align-items:center;gap:11px}
+.logo-svg{width:38px;height:38px;flex-shrink:0}
+.logo-text{display:flex;flex-direction:column;line-height:1}
+.logo-text strong{font-size:16px;font-weight:700;color:var(--white);letter-spacing:.01em;text-transform:uppercase}
+.logo-text em{font-size:10px;font-weight:300;font-style:normal;color:var(--lime);letter-spacing:.06em;margin-top:3px}
+.nav-links{display:flex;gap:30px;list-style:none;align-items:center}
+.nav-links a{color:rgba(255,255,255,.75);font-size:12px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;transition:color .2s;position:relative;padding-bottom:3px}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:var(--lime);transition:width .22s}
 .nav-links a:hover{color:var(--white)}
 .nav-links a:hover::after{width:100%}
-.nav-cta{background:var(--gold);color:var(--dark)!important;padding:10px 22px;border-radius:2px;font-weight:500!important}
+.nav-cta{background:var(--lime)!important;color:var(--dark)!important;padding:9px 20px;border-radius:var(--radius);font-weight:600!important}
 .nav-cta::after{display:none!important}
-.nav-cta:hover{background:#b8983d!important}
+.nav-cta:hover{background:var(--lime-dark)!important;color:var(--dark)!important}
 .nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
 .nav-toggle span{display:block;width:24px;height:1.5px;background:var(--white);transition:.3s}
 
-/* ── HERO ── */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:var(--dark);overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:
-  linear-gradient(135deg,rgba(15,26,19,.92) 40%,rgba(26,92,50,.6) 100%);
-  z-index:1}
-.hero-pattern{position:absolute;inset:0;background-image:
-  repeating-linear-gradient(0deg,transparent,transparent 60px,rgba(255,255,255,.015) 60px,rgba(255,255,255,.015) 61px),
-  repeating-linear-gradient(90deg,transparent,transparent 60px,rgba(255,255,255,.015) 60px,rgba(255,255,255,.015) 61px);
-  z-index:2}
-.hero-img{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=80') center/cover no-repeat;opacity:.18;z-index:0}
-.hero-content{position:relative;z-index:3;max-width:760px}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:28px;opacity:0;animation:fadeUp .7s .2s forwards}
-.hero-eyebrow::before{content:'';display:block;width:32px;height:1px;background:var(--gold)}
-.hero-title{font-family:var(--ff-display);font-size:clamp(44px,6vw,80px);font-weight:900;color:var(--white);line-height:1.05;margin-bottom:24px;opacity:0;animation:fadeUp .7s .35s forwards}
-.hero-title em{font-style:normal;color:var(--gold)}
-.hero-desc{font-size:17px;color:rgba(255,255,255,.7);max-width:520px;line-height:1.75;margin-bottom:48px;opacity:0;animation:fadeUp .7s .5s forwards}
-.hero-actions{display:flex;gap:16px;flex-wrap:wrap;opacity:0;animation:fadeUp .7s .65s forwards}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;font-family:var(--ff-body);font-size:14px;font-weight:500;letter-spacing:.04em;border-radius:2px;cursor:pointer;transition:all .25s;border:none}
-.btn-primary{background:var(--gold);color:var(--dark)}
-.btn-primary:hover{background:#b8983d;transform:translateY(-1px)}
-.btn-outline{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.3)}
-.btn-outline:hover{border-color:var(--white);background:rgba(255,255,255,.06)}
-.hero-stats{position:relative;z-index:3;display:flex;gap:0;opacity:0;animation:fadeUp .7s .8s forwards;margin-top:72px;border-top:1px solid rgba(255,255,255,.1);padding-top:40px}
-.hero-stat{flex:1;padding:0 28px;border-left:1px solid rgba(255,255,255,.12)}
-.hero-stat:first-child{border-left:none;padding-left:0}
-.stat-num{font-family:var(--ff-display);font-size:36px;font-weight:700;color:var(--gold);line-height:1}
-.stat-lbl{font-size:12px;color:rgba(255,255,255,.55);margin-top:6px;letter-spacing:.04em}
-.scroll-cue{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:8px;opacity:.5}
-.scroll-cue span{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--white)}
-.scroll-cue-line{width:1px;height:40px;background:rgba(255,255,255,.4);animation:scrollLine 2s ease-in-out infinite}
-@keyframes scrollLine{0%,100%{transform:scaleY(1);opacity:.4}50%{transform:scaleY(.5);opacity:.1}}
+/* HERO */
+.hero{position:relative;min-height:100vh;background:var(--dark);overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=80') center/cover no-repeat;opacity:.11;z-index:0}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(128deg,rgba(17,17,17,.97) 42%,rgba(141,198,63,.12) 100%);z-index:1}
+.hero-grid{position:absolute;inset:0;z-index:2;background-image:repeating-linear-gradient(0deg,transparent,transparent 80px,rgba(255,255,255,.015) 80px,rgba(255,255,255,.015) 81px),repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(255,255,255,.015) 80px,rgba(255,255,255,.015) 81px)}
+.hero-wrap{position:relative;z-index:3;display:flex;flex-direction:column;justify-content:center;min-height:100vh;padding-top:130px;padding-bottom:90px}
+.hero-tag{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--lime);margin-bottom:30px;opacity:0;animation:fadeUp .6s .1s forwards}
+.hero-tag::before{content:'';display:block;width:26px;height:1px;background:var(--lime)}
+.hero-h1{font-size:clamp(40px,5.2vw,74px);font-weight:900;color:var(--white);line-height:1.04;letter-spacing:-.025em;opacity:0;animation:fadeUp .6s .22s forwards}
+.hero-h1 span{color:var(--lime)}
+.hero-p{font-size:16px;font-weight:300;color:rgba(255,255,255,.6);max-width:460px;line-height:1.8;margin:24px 0 44px;opacity:0;animation:fadeUp .6s .38s forwards}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;opacity:0;animation:fadeUp .6s .5s forwards;margin-bottom:70px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;font-family:var(--ff);font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;border-radius:var(--radius);cursor:pointer;transition:all .22s;border:none}
+.btn-lime{background:var(--lime);color:var(--dark)}
+.btn-lime:hover{background:var(--lime-dark);transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.22)}
+.btn-ghost:hover{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.05)}
+.hero-stats{display:flex;border-top:1px solid rgba(255,255,255,.09);padding-top:38px;opacity:0;animation:fadeUp .6s .65s forwards}
+.hs{flex:1;padding:0 30px;border-left:1px solid rgba(255,255,255,.09)}
+.hs:first-child{border-left:none;padding-left:0}
+.hs-n{font-size:36px;font-weight:900;color:var(--lime);line-height:1;letter-spacing:-.02em}
+.hs-l{font-size:11px;font-weight:300;color:rgba(255,255,255,.4);margin-top:6px;letter-spacing:.04em}
 
-/* ── SECTION COMMONS ── */
-section{padding:100px 0}
-.label{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--green);margin-bottom:16px}
-.label::before{content:'';display:block;width:24px;height:1px;background:var(--green)}
-.section-title{font-family:var(--ff-display);font-size:clamp(32px,4vw,52px);font-weight:700;color:var(--dark);line-height:1.1;margin-bottom:16px}
-.section-sub{font-size:17px;color:var(--text-muted);max-width:560px;line-height:1.75}
+/* SECTIONS */
+section{padding:92px 0}
+.stag{display:inline-flex;align-items:center;gap:9px;font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--lime);margin-bottom:12px}
+.stag::before{content:'';display:block;width:18px;height:1.5px;background:var(--lime)}
+.stitle{font-size:clamp(26px,3.2vw,44px);font-weight:800;color:var(--dark);line-height:1.08;letter-spacing:-.022em;margin-bottom:12px}
+.ssub{font-size:15px;font-weight:300;color:var(--text-muted);max-width:520px;line-height:1.75}
 
-/* ── SERVICES ── */
-.services{background:var(--green-pale)}
-.services-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:64px;flex-wrap:wrap}
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2px}
-.service-card{background:var(--white);padding:44px 36px;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s;cursor:default}
-.service-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--gold);transition:height .35s}
-.service-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
-.service-card:hover::before{height:100%}
-.svc-number{font-family:var(--ff-display);font-size:48px;font-weight:900;color:var(--green-light);line-height:1;margin-bottom:20px;transition:color .3s}
-.service-card:hover .svc-number{color:var(--gold-light)}
-.svc-icon{width:48px;height:48px;background:var(--green-light);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:20px;transition:background .3s}
-.svc-icon svg{width:22px;height:22px;color:var(--green);stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.service-card:hover .svc-icon{background:var(--gold-light)}
-.service-card:hover .svc-icon svg{color:var(--gold)}
-.svc-title{font-family:var(--ff-display);font-size:20px;font-weight:700;color:var(--dark);margin-bottom:12px}
-.svc-desc{font-size:14px;color:var(--text-muted);line-height:1.75}
+/* SERVICES */
+.services{background:var(--off-white)}
+.svc-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:52px;flex-wrap:wrap}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.svc{background:var(--white);padding:38px 30px;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s;border-bottom:3px solid transparent}
+.svc:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-bottom-color:var(--lime)}
+.svc-n{font-size:42px;font-weight:900;color:var(--lime-pale);line-height:1;margin-bottom:16px;letter-spacing:-.02em;transition:color .22s}
+.svc:hover .svc-n{color:var(--lime-light)}
+.svc-ico{width:44px;height:44px;background:var(--lime-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:background .22s}
+.svc-ico svg{width:19px;height:19px;stroke:var(--lime-dark);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.svc:hover .svc-ico{background:var(--lime)}
+.svc:hover .svc-ico svg{stroke:var(--dark)}
+.svc-t{font-size:16px;font-weight:700;color:var(--dark);margin-bottom:9px;letter-spacing:-.01em}
+.svc-d{font-size:13px;font-weight:300;color:var(--text-muted);line-height:1.75}
 
-/* ── ABOUT ── */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:76px;align-items:center}
 .about-visual{position:relative}
-.about-img-main{width:100%;aspect-ratio:4/5;background:var(--green-light);border-radius:var(--radius-lg);overflow:hidden;position:relative}
-.about-img-main img{width:100%;height:100%;object-fit:cover}
-.about-img-placeholder{width:100%;height:100%;background:linear-gradient(135deg,#c5deca 0%,#8dbe9c 50%,#5a9e71 100%);display:flex;align-items:center;justify-content:center}
-.about-img-placeholder svg{width:80px;height:80px;opacity:.4;color:var(--white)}
-.about-accent{position:absolute;bottom:-24px;right:-24px;width:180px;height:180px;background:var(--gold);border-radius:var(--radius-lg);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px}
-.accent-num{font-family:var(--ff-display);font-size:48px;font-weight:900;color:var(--white);line-height:1}
-.accent-lbl{font-size:12px;color:rgba(255,255,255,.8);margin-top:6px;line-height:1.4}
-.about-content{padding:20px 0}
-.about-text{font-size:16px;color:var(--text-muted);line-height:1.85;margin-bottom:20px}
-.about-pillars{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}
-.pillar{padding:20px;background:var(--green-pale);border-radius:var(--radius)}
-.pillar-title{font-weight:600;font-size:14px;color:var(--dark);margin-bottom:6px}
-.pillar-desc{font-size:13px;color:var(--text-muted);line-height:1.6}
+.about-img{width:100%;aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;background:linear-gradient(140deg,#d8eea8 0%,#a8d870 50%,#70a030 100%);display:flex;align-items:center;justify-content:center}
+.about-badge{position:absolute;bottom:-20px;right:-20px;width:155px;height:155px;background:var(--near-black);border-radius:var(--radius-lg);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
+.badge-n{font-size:42px;font-weight:900;color:var(--lime);line-height:1;letter-spacing:-.02em}
+.badge-l{font-size:11px;font-weight:300;color:rgba(255,255,255,.55);margin-top:6px;line-height:1.4}
+.about-txt{font-size:15px;font-weight:300;color:var(--text-muted);line-height:1.85;margin-bottom:16px}
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:32px}
+.pillar{padding:16px;background:var(--off-white);border-radius:var(--radius);border-left:2px solid var(--lime)}
+.pillar-t{font-size:13px;font-weight:700;color:var(--dark);margin-bottom:4px}
+.pillar-d{font-size:12px;font-weight:300;color:var(--text-muted);line-height:1.55}
 
-/* ── PROCESS ── */
-.process{background:var(--dark)}
-.process .label{color:var(--gold)}
-.process .label::before{background:var(--gold)}
-.process .section-title{color:var(--white)}
-.process .section-sub{color:rgba(255,255,255,.55)}
-.process-head{text-align:center;margin-bottom:72px}
-.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
-.process-steps::before{content:'';position:absolute;top:36px;left:10%;right:10%;height:1px;background:rgba(255,255,255,.1);z-index:0}
-.process-step{text-align:center;padding:0 24px;position:relative;z-index:1}
-.step-dot{width:72px;height:72px;border-radius:50%;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;transition:all .3s}
-.process-step:hover .step-dot{background:var(--gold);border-color:var(--gold)}
-.step-num{font-family:var(--ff-display);font-size:22px;font-weight:700;color:rgba(255,255,255,.4);transition:color .3s}
-.process-step:hover .step-num{color:var(--dark)}
-.step-title{font-family:var(--ff-display);font-size:16px;font-weight:700;color:var(--white);margin-bottom:10px}
-.step-desc{font-size:13px;color:rgba(255,255,255,.45);line-height:1.7}
+/* PROCESS */
+.process{background:var(--near-black)}
+.process .stag{color:var(--lime)}
+.process .stag::before{background:var(--lime)}
+.process .stitle{color:var(--white)}
+.process .ssub{color:rgba(255,255,255,.4)}
+.proc-head{text-align:center;margin-bottom:60px}
+.proc-head .stag{justify-content:center}
+.proc-steps{display:grid;grid-template-columns:repeat(4,1fr);position:relative}
+.proc-steps::before{content:'';position:absolute;top:33px;left:12%;right:12%;height:1px;background:rgba(255,255,255,.07)}
+.pstep{text-align:center;padding:0 18px;position:relative;z-index:1}
+.pdot{width:66px;height:66px;border-radius:50%;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.03);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;transition:all .25s}
+.pstep:hover .pdot{background:var(--lime);border-color:var(--lime)}
+.pnum{font-size:19px;font-weight:800;color:rgba(255,255,255,.25);transition:color .25s;letter-spacing:-.01em}
+.pstep:hover .pnum{color:var(--dark)}
+.ptitle{font-size:14px;font-weight:700;color:var(--white);margin-bottom:9px;letter-spacing:-.01em}
+.pdesc{font-size:12px;font-weight:300;color:rgba(255,255,255,.38);line-height:1.7}
 
-/* ── CONTACT ── */
-.contact-card{background:var(--green-pale);border-radius:var(--radius-lg);padding:36px 32px;text-align:center;transition:box-shadow .3s,transform .3s}
-.contact-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
-.contact-card .citem-icon{width:52px;height:52px;border-radius:50%;background:var(--green-light);display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
-.contact-card .citem-icon svg{width:20px;height:20px;stroke:var(--green);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.contact-card .citem-label{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px}
-.contact-card .citem-val{font-size:15px;color:var(--dark);font-weight:500;line-height:1.6}
-.contact-card .citem-val a{color:var(--green);transition:color .2s}
-.contact-card .citem-val a:hover{color:var(--gold)}
+/* CONTACT */
+.contact-head{text-align:center;margin-bottom:48px}
+.contact-head .stag{justify-content:center}
+.contact-head .ssub{margin:0 auto}
+.cc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:840px;margin:0 auto}
+.cc{background:var(--off-white);border-radius:var(--radius-lg);padding:34px 26px;text-align:center;transition:box-shadow .25s,transform .25s;border-bottom:2px solid transparent}
+.cc:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);border-bottom-color:var(--lime)}
+.cc-ico{width:48px;height:48px;border-radius:50%;background:var(--lime-pale);display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
+.cc-ico svg{width:19px;height:19px;stroke:var(--lime-dark);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.cc-lbl{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:7px}
+.cc-val{font-size:14px;font-weight:500;color:var(--dark);line-height:1.6}
+.cc-val a{color:var(--lime-dark);transition:color .2s}
+.cc-val a:hover{color:var(--lime)}
+.contact-cta{text-align:center;margin-top:42px}
 
-/* ── FOOTER ── */
-.footer{background:var(--dark);padding:72px 0 0}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:56px;border-bottom:1px solid rgba(255,255,255,.08)}
-.footer-brand .logo{font-size:20px;margin-bottom:16px;display:block}
-.footer-brand p{font-size:14px;color:rgba(255,255,255,.4);line-height:1.75;max-width:260px}
-.footer-col h5{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
-.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:12px}
-.footer-col ul li a{font-size:14px;color:rgba(255,255,255,.45);transition:color .2s}
-.footer-col ul li a:hover{color:var(--white)}
-.footer-col ul li{font-size:14px;color:rgba(255,255,255,.35)}
-.footer-bottom{padding:24px 0;display:flex;justify-content:space-between;align-items:center}
-.footer-bottom p{font-size:13px;color:rgba(255,255,255,.25)}
+/* FOOTER */
+.footer{background:var(--near-black);padding:60px 0 0}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.06)}
+.footer-brand p{font-size:13px;font-weight:300;color:rgba(255,255,255,.32);line-height:1.8;max-width:250px;margin-top:14px}
+.fcol h5{font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--lime);margin-bottom:16px}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.fcol ul li a{font-size:13px;font-weight:300;color:rgba(255,255,255,.38);transition:color .2s}
+.fcol ul li a:hover{color:var(--white)}
+.fcol ul li{font-size:13px;font-weight:300;color:rgba(255,255,255,.28)}
+.footer-bottom{padding:20px 0;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.footer-bottom p{font-size:12px;font-weight:300;color:rgba(255,255,255,.18)}
+.footer-tagline{font-size:12px;font-weight:300;font-style:italic;color:rgba(141,198,63,.5)}
 
-/* ── ANIMATIONS ── */
-@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-.reveal{opacity:0;transform:translateY(32px);transition:opacity .65s,transform .65s}
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .55s,transform .55s}
 .reveal.visible{opacity:1;transform:translateY(0)}
-.reveal-delay-1{transition-delay:.1s}
-.reveal-delay-2{transition-delay:.2s}
-.reveal-delay-3{transition-delay:.3s}
-.reveal-delay-4{transition-delay:.4s}
+.d1{transition-delay:.09s}.d2{transition-delay:.18s}.d3{transition-delay:.27s}
 
-/* ── MOBILE ── */
-@media(max-width:900px){
-  .about-grid,.contact-wrap{grid-template-columns:1fr;gap:48px}
-  .about-accent{display:none}
-  .process-steps{grid-template-columns:1fr 1fr;gap:32px}
-  .process-steps::before{display:none}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:36px}
+/* RESPONSIVE */
+@media(max-width:960px){
+  .about-grid{grid-template-columns:1fr;gap:48px}
+  .about-badge{display:none}
+  .proc-steps{grid-template-columns:1fr 1fr;gap:40px}
+  .proc-steps::before{display:none}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:30px}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .cc-grid{grid-template-columns:1fr}
   .hero-stats{display:none}
-  .services-head{flex-direction:column;align-items:flex-start}
 }
-@media(max-width:640px){
-  .nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--dark);flex-direction:column;align-items:center;justify-content:center;gap:32px;z-index:200}
+@media(max-width:620px){
+  .nav-links{display:none;position:fixed;inset:0;background:var(--dark);flex-direction:column;align-items:center;justify-content:center;gap:32px;z-index:200}
   .nav-links.open{display:flex}
   .nav-toggle{display:flex;z-index:210}
-  .form-row{grid-template-columns:1fr}
-  .process-steps{grid-template-columns:1fr}
+  .svc-grid{grid-template-columns:1fr}
+  .proc-steps{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr}
-  .hero-actions{flex-direction:column;align-items:flex-start}
-  .contact-form{padding:32px 24px}
+  .hero-btns{flex-direction:column;align-items:flex-start}
 }
 </style>
 </head>
@@ -216,16 +206,44 @@ section{padding:100px 0}
   </div>
 </div>
 
-<!-- NAV -->
+<!-- NAVBAR -->
 <nav class="navbar" id="navbar">
   <div class="container">
     <div class="nav-inner">
-      <a href="#home" class="logo"><span>Green</span> Engineering</a>
+      <a href="#home" class="logo-block">
+        <svg class="logo-svg" viewBox="0 0 40 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 2C12 2 5 8.5 5 17C5 23 8.5 28 14 30.5V40H26V30.5C31.5 28 35 23 35 17C35 8.5 28 2 20 2Z" fill="#8dc63f"/>
+          <line x1="20" y1="17" x2="14" y2="11" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="20" y1="17" x2="26" y2="11" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="20" y1="17" x2="20" y2="7"  stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+          <rect x="17.5" y="31" width="5" height="9" rx="1.5" fill="#8dc63f"/>
+        </svg>
+        <div class="logo-text">
+          <strong>Green Engineering</strong>
+          <em>idei și soluții</em>
+        </div>
+      </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#home" data-lang="ro" class="active">Acasă</a><a href="#home" data-lang="en">Home</a><a href="#home" data-lang="ru">Главная</a></li>
-        <li><a href="#services" data-lang="ro" class="active">Servicii</a><a href="#services" data-lang="en">Services</a><a href="#services" data-lang="ru">Услуги</a></li>
-        <li><a href="#about" data-lang="ro" class="active">Despre Noi</a><a href="#about" data-lang="en">About</a><a href="#about" data-lang="ru">О нас</a></li>
-        <li><a href="#contact" class="nav-cta" data-lang="ro" style="display:inline">Contact</a><a href="#contact" class="nav-cta" data-lang="en">Contact</a><a href="#contact" class="nav-cta" data-lang="ru">Контакт</a></li>
+        <li>
+          <a href="#home" data-lang="ro" class="active">Acasă</a>
+          <a href="#home" data-lang="en">Home</a>
+          <a href="#home" data-lang="ru">Главная</a>
+        </li>
+        <li>
+          <a href="#services" data-lang="ro" class="active">Servicii</a>
+          <a href="#services" data-lang="en">Services</a>
+          <a href="#services" data-lang="ru">Услуги</a>
+        </li>
+        <li>
+          <a href="#about" data-lang="ro" class="active">Despre Noi</a>
+          <a href="#about" data-lang="en">About</a>
+          <a href="#about" data-lang="ru">О нас</a>
+        </li>
+        <li>
+          <a href="#contact" class="nav-cta" data-lang="ro" class="active">Contact</a>
+          <a href="#contact" class="nav-cta" data-lang="en">Contact</a>
+          <a href="#contact" class="nav-cta" data-lang="ru">Контакт</a>
+        </li>
       </ul>
       <button class="nav-toggle" id="navToggle" onclick="toggleMenu()">
         <span></span><span></span><span></span>
@@ -236,72 +254,54 @@ section{padding:100px 0}
 
 <!-- HERO -->
 <section id="home" class="hero">
-  <div class="hero-img"></div>
   <div class="hero-bg"></div>
-  <div class="hero-pattern"></div>
-  <div class="container" style="display:flex;flex-direction:column;justify-content:center;min-height:100vh;padding-top:120px;padding-bottom:80px">
-    <div class="hero-content">
-      <div class="hero-eyebrow">
-        <span data-lang="ro" class="active">Republica Moldova · Din 2009</span>
-        <span data-lang="en">Republic of Moldova · Since 2009</span>
-        <span data-lang="ru">Республика Молдова · С 2009 года</span>
-      </div>
-      <h1 class="hero-title">
-        <span data-lang="ro" class="active">Construim<br><em>Moldova</em><br>de Mâine</span>
-        <span data-lang="en">Building<br><em>Tomorrow's</em><br>Moldova</span>
-        <span data-lang="ru">Строим<br><em>Молдову</em><br>Будущего</span>
-      </h1>
-      <p class="hero-desc">
-        <span data-lang="ro" class="active">Servicii premium de construcții ce combină inovația, calitatea și sustenabilitatea pentru fiecare proiect.</span>
-        <span data-lang="en">Premium construction services combining innovation, quality and sustainability for every project.</span>
-        <span data-lang="ru">Премиальные строительные услуги, сочетающие инновации, качество и устойчивость в каждом проекте.</span>
-      </p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">
-          <span data-lang="ro" class="active">Solicită Ofertă</span>
-          <span data-lang="en">Request a Quote</span>
-          <span data-lang="ru">Запросить Оферту</span>
-          &#8594;
-        </a>
-        <a href="#about" class="btn btn-outline">
-          <span data-lang="ro" class="active">Despre Noi</span>
-          <span data-lang="en">About Us</span>
-          <span data-lang="ru">О нас</span>
-        </a>
-      </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-grid"></div>
+  <div class="container hero-wrap">
+    <div class="hero-tag">
+      <span data-lang="ro" class="active">Republica Moldova &middot; Din 2009</span>
+      <span data-lang="en">Republic of Moldova &middot; Since 2009</span>
+      <span data-lang="ru">Республика Молдова &middot; С 2009 года</span>
+    </div>
+    <h1 class="hero-h1">
+      <span data-lang="ro" class="active">Construim<br><span>Moldova de Mâine</span></span>
+      <span data-lang="en">Building<br><span>Tomorrow's Moldova</span></span>
+      <span data-lang="ru">Строим<br><span>Молдову Будущего</span></span>
+    </h1>
+    <p class="hero-p">
+      <span data-lang="ro" class="active">Servicii premium de construcții ce combină inovația, calitatea și sustenabilitatea — idei și soluții pentru fiecare proiect.</span>
+      <span data-lang="en">Premium construction services combining innovation, quality and sustainability — ideas and solutions for every project.</span>
+      <span data-lang="ru">Премиальные строительные услуги, сочетающие инновации, качество и устойчивость — идеи и решения для каждого проекта.</span>
+    </p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn btn-lime">
+        <span data-lang="ro" class="active">Solicită Ofertă</span>
+        <span data-lang="en">Request a Quote</span>
+        <span data-lang="ru">Запросить Оферту</span>
+        &rarr;
+      </a>
+      <a href="#about" class="btn btn-ghost">
+        <span data-lang="ro" class="active">Despre Noi</span>
+        <span data-lang="en">About Us</span>
+        <span data-lang="ru">О нас</span>
+      </a>
     </div>
     <div class="hero-stats">
-      <div class="hero-stat">
-        <div class="stat-num">500+</div>
-        <div class="stat-lbl">
-          <span data-lang="ro" class="active">Proiecte Finalizate</span>
-          <span data-lang="en">Projects Completed</span>
-          <span data-lang="ru">Завершённых Проектов</span>
-        </div>
+      <div class="hs">
+        <div class="hs-n">500+</div>
+        <div class="hs-l"><span data-lang="ro" class="active">Proiecte Finalizate</span><span data-lang="en">Projects Completed</span><span data-lang="ru">Завершённых Проектов</span></div>
       </div>
-      <div class="hero-stat">
-        <div class="stat-num">15+</div>
-        <div class="stat-lbl">
-          <span data-lang="ro" class="active">Ani de Experiență</span>
-          <span data-lang="en">Years of Experience</span>
-          <span data-lang="ru">Лет Опыта</span>
-        </div>
+      <div class="hs">
+        <div class="hs-n">15+</div>
+        <div class="hs-l"><span data-lang="ro" class="active">Ani de Experiență</span><span data-lang="en">Years of Experience</span><span data-lang="ru">Лет Опыта</span></div>
       </div>
-      <div class="hero-stat">
-        <div class="stat-num">98%</div>
-        <div class="stat-lbl">
-          <span data-lang="ro" class="active">Satisfacția Clienților</span>
-          <span data-lang="en">Client Satisfaction</span>
-          <span data-lang="ru">Удовлетворённость Клиентов</span>
-        </div>
+      <div class="hs">
+        <div class="hs-n">98%</div>
+        <div class="hs-l"><span data-lang="ro" class="active">Satisfacția Clienților</span><span data-lang="en">Client Satisfaction</span><span data-lang="ru">Удовлетворённость Клиентов</span></div>
       </div>
-      <div class="hero-stat">
-        <div class="stat-num">40+</div>
-        <div class="stat-lbl">
-          <span data-lang="ro" class="active">Specialiști Calificați</span>
-          <span data-lang="en">Qualified Specialists</span>
-          <span data-lang="ru">Квалифицированных Специалистов</span>
-        </div>
+      <div class="hs">
+        <div class="hs-n">40+</div>
+        <div class="hs-l"><span data-lang="ro" class="active">Specialiști Calificați</span><span data-lang="en">Qualified Specialists</span><span data-lang="ru">Квалифицированных Специалистов</span></div>
       </div>
     </div>
   </div>
@@ -310,129 +310,54 @@ section{padding:100px 0}
 <!-- SERVICES -->
 <section id="services" class="services">
   <div class="container">
-    <div class="services-head reveal">
+    <div class="svc-head reveal">
       <div>
-        <div class="label">
-          <span data-lang="ro" class="active">Ce Oferim</span>
-          <span data-lang="en">What We Offer</span>
-          <span data-lang="ru">Что Мы Предлагаем</span>
-        </div>
-        <h2 class="section-title">
-          <span data-lang="ro" class="active">Serviciile Noastre</span>
-          <span data-lang="en">Our Services</span>
-          <span data-lang="ru">Наши Услуги</span>
-        </h2>
+        <div class="stag"><span data-lang="ro" class="active">Ce Oferim</span><span data-lang="en">What We Offer</span><span data-lang="ru">Что Мы Предлагаем</span></div>
+        <h2 class="stitle"><span data-lang="ro" class="active">Serviciile Noastre</span><span data-lang="en">Our Services</span><span data-lang="ru">Наши Услуги</span></h2>
       </div>
-      <p class="section-sub">
+      <p class="ssub">
         <span data-lang="ro" class="active">Soluții complete de construcții pentru fiecare necesitate, cu standarde de calitate europene.</span>
         <span data-lang="en">Complete construction solutions for every need, built to European quality standards.</span>
-        <span data-lang="ru">Комплексные строительные решения для любых нужд по европейским стандартам качества.</span>
+        <span data-lang="ru">Комплексные строительные решения для любых нужд по европейским стандартам.</span>
       </p>
     </div>
-    <div class="services-grid">
-
-      <div class="service-card reveal">
-        <div class="svc-number">01</div>
-        <div class="svc-icon">
-          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </div>
-        <h3 class="svc-title">
-          <span data-lang="ro" class="active">Construcții Rezidențiale</span>
-          <span data-lang="en">Residential Construction</span>
-          <span data-lang="ru">Жилое Строительство</span>
-        </h3>
-        <p class="svc-desc">
-          <span data-lang="ro" class="active">Case personalizate și complexe rezidențiale construite conform celor mai înalte standarde de calitate și confort.</span>
-          <span data-lang="en">Custom homes and residential complexes built to the highest standards of quality and comfort.</span>
-          <span data-lang="ru">Индивидуальные дома и жилые комплексы, построенные по высочайшим стандартам качества и комфорта.</span>
-        </p>
+    <div class="svc-grid">
+      <div class="svc reveal">
+        <div class="svc-n">01</div>
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3 class="svc-t"><span data-lang="ro" class="active">Construcții Rezidențiale</span><span data-lang="en">Residential Construction</span><span data-lang="ru">Жилое Строительство</span></h3>
+        <p class="svc-d"><span data-lang="ro" class="active">Case personalizate și complexe rezidențiale construite conform celor mai înalte standarde de calitate și confort.</span><span data-lang="en">Custom homes and residential complexes built to the highest standards of quality and comfort.</span><span data-lang="ru">Индивидуальные дома и жилые комплексы по высочайшим стандартам качества и комфорта.</span></p>
       </div>
-
-      <div class="service-card reveal reveal-delay-1">
-        <div class="svc-number">02</div>
-        <div class="svc-icon">
-          <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
-        </div>
-        <h3 class="svc-title">
-          <span data-lang="ro" class="active">Clădiri Comerciale</span>
-          <span data-lang="en">Commercial Buildings</span>
-          <span data-lang="ru">Коммерческие Здания</span>
-        </h3>
-        <p class="svc-desc">
-          <span data-lang="ro" class="active">Spații moderne de birouri, centre comerciale și facilități comerciale proiectate pentru succes.</span>
-          <span data-lang="en">Modern office spaces, shopping centres, and commercial facilities designed for success.</span>
-          <span data-lang="ru">Современные офисные помещения, торговые центры и коммерческие объекты, разработанные для успеха.</span>
-        </p>
+      <div class="svc reveal d1">
+        <div class="svc-n">02</div>
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
+        <h3 class="svc-t"><span data-lang="ro" class="active">Clădiri Comerciale</span><span data-lang="en">Commercial Buildings</span><span data-lang="ru">Коммерческие Здания</span></h3>
+        <p class="svc-d"><span data-lang="ro" class="active">Spații moderne de birouri, centre comerciale și facilități comerciale proiectate pentru succes.</span><span data-lang="en">Modern office spaces, shopping centres, and commercial facilities designed for success.</span><span data-lang="ru">Современные офисы, торговые центры и коммерческие объекты для успеха.</span></p>
       </div>
-
-      <div class="service-card reveal reveal-delay-2">
-        <div class="svc-number">03</div>
-        <div class="svc-icon">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
-        <h3 class="svc-title">
-          <span data-lang="ro" class="active">Management de Proiect</span>
-          <span data-lang="en">Project Management</span>
-          <span data-lang="ru">Управление Проектом</span>
-        </h3>
-        <p class="svc-desc">
-          <span data-lang="ro" class="active">Coordonare completă a proiectelor asigurând livrarea la timp și respectarea bugetului.</span>
-          <span data-lang="en">Full project coordination ensuring on-time delivery and budget compliance.</span>
-          <span data-lang="ru">Полная координация проектов, обеспечивающая своевременную сдачу и соблюдение бюджета.</span>
-        </p>
+      <div class="svc reveal d2">
+        <div class="svc-n">03</div>
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3 class="svc-t"><span data-lang="ro" class="active">Management de Proiect</span><span data-lang="en">Project Management</span><span data-lang="ru">Управление Проектом</span></h3>
+        <p class="svc-d"><span data-lang="ro" class="active">Coordonare completă a proiectelor asigurând livrarea la timp și respectarea bugetului.</span><span data-lang="en">Full project coordination ensuring on-time delivery and budget compliance.</span><span data-lang="ru">Полная координация проектов, обеспечивающая сдачу в срок и соблюдение бюджета.</span></p>
       </div>
-
-      <div class="service-card reveal">
-        <div class="svc-number">04</div>
-        <div class="svc-icon">
-          <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
-        </div>
-        <h3 class="svc-title">
-          <span data-lang="ro" class="active">Renovare & Remodelare</span>
-          <span data-lang="en">Renovation & Remodelling</span>
-          <span data-lang="ru">Ремонт и Реконструкция</span>
-        </h3>
-        <p class="svc-desc">
-          <span data-lang="ro" class="active">Transformăm spațiile existente cu servicii experte de renovare și modernizare.</span>
-          <span data-lang="en">We transform existing spaces with expert renovation and modernisation services.</span>
-          <span data-lang="ru">Преобразуем существующие пространства с помощью экспертных услуг по ремонту и модернизации.</span>
-        </p>
+      <div class="svc reveal">
+        <div class="svc-n">04</div>
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
+        <h3 class="svc-t"><span data-lang="ro" class="active">Renovare & Remodelare</span><span data-lang="en">Renovation & Remodelling</span><span data-lang="ru">Ремонт и Реконструкция</span></h3>
+        <p class="svc-d"><span data-lang="ro" class="active">Transformăm spațiile existente cu servicii experte de renovare și modernizare.</span><span data-lang="en">We transform existing spaces with expert renovation and modernisation services.</span><span data-lang="ru">Преобразуем существующие пространства с помощью экспертного ремонта.</span></p>
       </div>
-
-      <div class="service-card reveal reveal-delay-1">
-        <div class="svc-number">05</div>
-        <div class="svc-icon">
-          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </div>
-        <h3 class="svc-title">
-          <span data-lang="ro" class="active">Dezvoltare Infrastructură</span>
-          <span data-lang="en">Infrastructure Development</span>
-          <span data-lang="ru">Развитие Инфраструктуры</span>
-        </h3>
-        <p class="svc-desc">
-          <span data-lang="ro" class="active">Drumuri, poduri și infrastructură esențială pentru dezvoltarea comunității.</span>
-          <span data-lang="en">Roads, bridges, and essential infrastructure for community development.</span>
-          <span data-lang="ru">Дороги, мосты и важнейшая инфраструктура для развития сообщества.</span>
-        </p>
+      <div class="svc reveal d1">
+        <div class="svc-n">05</div>
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h3 class="svc-t"><span data-lang="ro" class="active">Dezvoltare Infrastructură</span><span data-lang="en">Infrastructure Development</span><span data-lang="ru">Развитие Инфраструктуры</span></h3>
+        <p class="svc-d"><span data-lang="ro" class="active">Drumuri, poduri și infrastructură esențială pentru dezvoltarea comunității.</span><span data-lang="en">Roads, bridges, and essential infrastructure for community development.</span><span data-lang="ru">Дороги, мосты и важнейшая инфраструктура для развития сообщества.</span></p>
       </div>
-
-      <div class="service-card reveal reveal-delay-2">
-        <div class="svc-number">06</div>
-        <div class="svc-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-        </div>
-        <h3 class="svc-title">
-          <span data-lang="ro" class="active">Construcții Ecologice</span>
-          <span data-lang="en">Eco-Friendly Construction</span>
-          <span data-lang="ru">Экологическое Строительство</span>
-        </h3>
-        <p class="svc-desc">
-          <span data-lang="ro" class="active">Construcții durabile și ecologice cu design și materiale eficiente energetic.</span>
-          <span data-lang="en">Sustainable, eco-friendly construction with energy-efficient design and materials.</span>
-          <span data-lang="ru">Устойчивое экологически чистое строительство с энергоэффективным дизайном и материалами.</span>
-        </p>
+      <div class="svc reveal d2">
+        <div class="svc-n">06</div>
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        <h3 class="svc-t"><span data-lang="ro" class="active">Construcții Ecologice</span><span data-lang="en">Eco-Friendly Construction</span><span data-lang="ru">Экологическое Строительство</span></h3>
+        <p class="svc-d"><span data-lang="ro" class="active">Construcții durabile și ecologice cu design și materiale eficiente energetic.</span><span data-lang="en">Sustainable, eco-friendly construction with energy-efficient design and materials.</span><span data-lang="ru">Устойчивое экостроительство с энергоэффективными материалами.</span></p>
       </div>
-
     </div>
   </div>
 </section>
@@ -442,78 +367,30 @@ section{padding:100px 0}
   <div class="container">
     <div class="about-grid">
       <div class="about-visual reveal">
-        <div class="about-img-main">
-          <div class="about-img-placeholder">
-            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:80px;height:80px;color:white">
-              <rect x="10" y="30" width="60" height="40" stroke="currentColor" stroke-width="2" fill="none" rx="2"/>
-              <path d="M10 30L40 10L70 30" stroke="currentColor" stroke-width="2" fill="none"/>
-              <rect x="30" y="50" width="20" height="20" fill="currentColor" opacity=".5"/>
-            </svg>
-          </div>
+        <div class="about-img">
+          <svg viewBox="0 0 100 120" fill="none" style="width:100px;opacity:.3">
+            <path d="M50 5C34 5 18 17 18 35C18 47 24 57 34 63L34 90L66 90L66 63C76 57 82 47 82 35C82 17 66 5 50 5Z" fill="white"/>
+            <line x1="50" y1="35" x2="38" y2="23" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="50" y1="35" x2="62" y2="23" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="50" y1="35" x2="50" y2="14" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <rect x="44" y="70" width="12" height="20" rx="3" fill="white" opacity=".7"/>
+          </svg>
         </div>
-        <div class="about-accent">
-          <div class="accent-num">15+</div>
-          <div class="accent-lbl">
-            <span data-lang="ro" class="active">Ani de Experiență</span>
-            <span data-lang="en">Years of Experience</span>
-            <span data-lang="ru">Лет Опыта</span>
-          </div>
+        <div class="about-badge">
+          <div class="badge-n">15+</div>
+          <div class="badge-l"><span data-lang="ro" class="active">Ani de Experiență</span><span data-lang="en">Years of Experience</span><span data-lang="ru">Лет Опыта</span></div>
         </div>
       </div>
-      <div class="about-content reveal reveal-delay-2">
-        <div class="label">
-          <span data-lang="ro" class="active">Cine Suntem</span>
-          <span data-lang="en">Who We Are</span>
-          <span data-lang="ru">Кто Мы</span>
-        </div>
-        <h2 class="section-title">
-          <span data-lang="ro" class="active">Despre Green Engineering</span>
-          <span data-lang="en">About Green Engineering</span>
-          <span data-lang="ru">О Green Engineering</span>
-        </h2>
-        <p class="about-text">
-          <span data-lang="ro" class="active">Cu peste 15 ani de experiență în industria construcțiilor, Green Engineering a devenit un nume de încredere în Republica Moldova. Ne mândrim cu livrarea unei calități excepționale, soluții inovatoare și practici de construcție durabile.</span>
-          <span data-lang="en">With over 15 years of experience in the construction industry, Green Engineering has become a trusted name in the Republic of Moldova. We pride ourselves on delivering exceptional quality, innovative solutions, and sustainable building practices.</span>
-          <span data-lang="ru">Имея более 15 лет опыта в строительной отрасли, Green Engineering стал надёжным именем в Республике Молдова. Мы гордимся исключительным качеством, инновационными решениями и устойчивыми строительными практиками.</span>
-        </p>
-        <p class="about-text">
-          <span data-lang="ro" class="active">Echipa noastră de profesioniști calificați combină meșteșugul tradițional cu tehnologia modernă pentru a crea structuri care rezistă testului timpului.</span>
-          <span data-lang="en">Our team of qualified professionals combines traditional craftsmanship with modern technology to create structures that stand the test of time.</span>
-          <span data-lang="ru">Наша команда квалифицированных специалистов сочетает традиционное мастерство с современными технологиями для создания долговечных конструкций.</span>
-        </p>
-        <div class="about-pillars">
-          <div class="pillar">
-            <div class="pillar-title">
-              <span data-lang="ro" class="active">Calitate</span><span data-lang="en">Quality</span><span data-lang="ru">Качество</span>
-            </div>
-            <div class="pillar-desc">
-              <span data-lang="ro" class="active">Standarde europene la fiecare etapă</span><span data-lang="en">European standards at every stage</span><span data-lang="ru">Европейские стандарты на каждом этапе</span>
-            </div>
-          </div>
-          <div class="pillar">
-            <div class="pillar-title">
-              <span data-lang="ro" class="active">Inovație</span><span data-lang="en">Innovation</span><span data-lang="ru">Инновации</span>
-            </div>
-            <div class="pillar-desc">
-              <span data-lang="ro" class="active">Tehnologii moderne de construcție</span><span data-lang="en">Modern construction technologies</span><span data-lang="ru">Современные строительные технологии</span>
-            </div>
-          </div>
-          <div class="pillar">
-            <div class="pillar-title">
-              <span data-lang="ro" class="active">Sustenabilitate</span><span data-lang="en">Sustainability</span><span data-lang="ru">Устойчивость</span>
-            </div>
-            <div class="pillar-desc">
-              <span data-lang="ro" class="active">Materiale ecologice și eficiente</span><span data-lang="en">Eco-friendly, efficient materials</span><span data-lang="ru">Экологичные и эффективные материалы</span>
-            </div>
-          </div>
-          <div class="pillar">
-            <div class="pillar-title">
-              <span data-lang="ro" class="active">Fiabilitate</span><span data-lang="en">Reliability</span><span data-lang="ru">Надёжность</span>
-            </div>
-            <div class="pillar-desc">
-              <span data-lang="ro" class="active">Livrare la timp, în buget</span><span data-lang="en">On time, within budget</span><span data-lang="ru">В срок и в рамках бюджета</span>
-            </div>
-          </div>
+      <div class="reveal d2" style="padding:8px 0">
+        <div class="stag"><span data-lang="ro" class="active">Cine Suntem</span><span data-lang="en">Who We Are</span><span data-lang="ru">Кто Мы</span></div>
+        <h2 class="stitle"><span data-lang="ro" class="active">Despre Green Engineering</span><span data-lang="en">About Green Engineering</span><span data-lang="ru">О Green Engineering</span></h2>
+        <p class="about-txt"><span data-lang="ro" class="active">Cu peste 15 ani de experiență în industria construcțiilor, Green Engineering a devenit un nume de încredere în Republica Moldova. Ne mândrim cu livrarea unei calități excepționale, soluții inovatoare și practici de construcție durabile.</span><span data-lang="en">With over 15 years of experience in the construction industry, Green Engineering has become a trusted name in the Republic of Moldova. We pride ourselves on delivering exceptional quality, innovative solutions, and sustainable building practices.</span><span data-lang="ru">Имея более 15 лет опыта, Green Engineering стал надёжным именем в Республике Молдова. Мы гордимся исключительным качеством, инновационными решениями и устойчивыми практиками строительства.</span></p>
+        <p class="about-txt"><span data-lang="ro" class="active">Echipa noastră de profesioniști calificați combină meșteșugul tradițional cu tehnologia modernă pentru a crea structuri care rezistă testului timpului.</span><span data-lang="en">Our team of qualified professionals combines traditional craftsmanship with modern technology to create structures that stand the test of time.</span><span data-lang="ru">Наша команда сочетает традиционное мастерство с современными технологиями для создания долговечных конструкций.</span></p>
+        <div class="pillars">
+          <div class="pillar"><div class="pillar-t"><span data-lang="ro" class="active">Calitate</span><span data-lang="en">Quality</span><span data-lang="ru">Качество</span></div><div class="pillar-d"><span data-lang="ro" class="active">Standarde europene la fiecare etapă</span><span data-lang="en">European standards at every stage</span><span data-lang="ru">Европейские стандарты на каждом этапе</span></div></div>
+          <div class="pillar"><div class="pillar-t"><span data-lang="ro" class="active">Inovație</span><span data-lang="en">Innovation</span><span data-lang="ru">Инновации</span></div><div class="pillar-d"><span data-lang="ro" class="active">Tehnologii moderne de construcție</span><span data-lang="en">Modern construction technologies</span><span data-lang="ru">Современные технологии строительства</span></div></div>
+          <div class="pillar"><div class="pillar-t"><span data-lang="ro" class="active">Sustenabilitate</span><span data-lang="en">Sustainability</span><span data-lang="ru">Устойчивость</span></div><div class="pillar-d"><span data-lang="ro" class="active">Materiale ecologice și eficiente</span><span data-lang="en">Eco-friendly, efficient materials</span><span data-lang="ru">Экологичные и эффективные материалы</span></div></div>
+          <div class="pillar"><div class="pillar-t"><span data-lang="ro" class="active">Fiabilitate</span><span data-lang="en">Reliability</span><span data-lang="ru">Надёжность</span></div><div class="pillar-d"><span data-lang="ro" class="active">Livrare la timp, în buget</span><span data-lang="en">On time, within budget</span><span data-lang="ru">В срок и в рамках бюджета</span></div></div>
         </div>
       </div>
     </div>
@@ -523,44 +400,16 @@ section{padding:100px 0}
 <!-- PROCESS -->
 <section class="process">
   <div class="container">
-    <div class="process-head reveal">
-      <div class="label" style="justify-content:center">
-        <span data-lang="ro" class="active">Cum Lucrăm</span>
-        <span data-lang="en">How We Work</span>
-        <span data-lang="ru">Как Мы Работаем</span>
-      </div>
-      <h2 class="section-title">
-        <span data-lang="ro" class="active">Procesul Nostru</span>
-        <span data-lang="en">Our Process</span>
-        <span data-lang="ru">Наш Процесс</span>
-      </h2>
-      <p class="section-sub" style="margin:0 auto;text-align:center">
-        <span data-lang="ro" class="active">De la concept până la cheie în mână — un proces clar și transparent.</span>
-        <span data-lang="en">From concept to handover — a clear and transparent process.</span>
-        <span data-lang="ru">От концепции до сдачи ключей — чёткий и прозрачный процесс.</span>
-      </p>
+    <div class="proc-head reveal">
+      <div class="stag"><span data-lang="ro" class="active">Cum Lucrăm</span><span data-lang="en">How We Work</span><span data-lang="ru">Как Мы Работаем</span></div>
+      <h2 class="stitle"><span data-lang="ro" class="active">Procesul Nostru</span><span data-lang="en">Our Process</span><span data-lang="ru">Наш Процесс</span></h2>
+      <p class="ssub" style="margin:0 auto;text-align:center"><span data-lang="ro" class="active">De la concept până la cheie în mână — un proces clar și transparent.</span><span data-lang="en">From concept to handover — a clear and transparent process.</span><span data-lang="ru">От концепции до сдачи ключей — чёткий и прозрачный процесс.</span></p>
     </div>
-    <div class="process-steps">
-      <div class="process-step reveal">
-        <div class="step-dot"><span class="step-num">01</span></div>
-        <h4 class="step-title"><span data-lang="ro" class="active">Consultație</span><span data-lang="en">Consultation</span><span data-lang="ru">Консультация</span></h4>
-        <p class="step-desc"><span data-lang="ro" class="active">Înțelegem viziunea și cerințele dumneavoastră în detaliu.</span><span data-lang="en">We understand your vision and requirements in detail.</span><span data-lang="ru">Мы детально изучаем вашу концепцию и требования.</span></p>
-      </div>
-      <div class="process-step reveal reveal-delay-1">
-        <div class="step-dot"><span class="step-num">02</span></div>
-        <h4 class="step-title"><span data-lang="ro" class="active">Proiectare</span><span data-lang="en">Design</span><span data-lang="ru">Проектирование</span></h4>
-        <p class="step-desc"><span data-lang="ro" class="active">Elaborăm planuri detaliate și estimări precise de cost.</span><span data-lang="en">We develop detailed plans and precise cost estimates.</span><span data-lang="ru">Разрабатываем подробные планы и точные сметы.</span></p>
-      </div>
-      <div class="process-step reveal reveal-delay-2">
-        <div class="step-dot"><span class="step-num">03</span></div>
-        <h4 class="step-title"><span data-lang="ro" class="active">Execuție</span><span data-lang="en">Execution</span><span data-lang="ru">Выполнение</span></h4>
-        <p class="step-desc"><span data-lang="ro" class="active">Construim cu precizie, respectând termenele și standardele.</span><span data-lang="en">We build with precision, respecting timelines and standards.</span><span data-lang="ru">Строим точно, соблюдая сроки и стандарты.</span></p>
-      </div>
-      <div class="process-step reveal reveal-delay-3">
-        <div class="step-dot"><span class="step-num">04</span></div>
-        <h4 class="step-title"><span data-lang="ro" class="active">Predare</span><span data-lang="en">Handover</span><span data-lang="ru">Передача</span></h4>
-        <p class="step-desc"><span data-lang="ro" class="active">Predăm proiectul finalizat cu garanție și asistență post-livrare.</span><span data-lang="en">We hand over the finished project with warranty and after-service support.</span><span data-lang="ru">Передаём готовый объект с гарантией и постпродажным обслуживанием.</span></p>
-      </div>
+    <div class="proc-steps">
+      <div class="pstep reveal"><div class="pdot"><span class="pnum">01</span></div><h4 class="ptitle"><span data-lang="ro" class="active">Consultație</span><span data-lang="en">Consultation</span><span data-lang="ru">Консультация</span></h4><p class="pdesc"><span data-lang="ro" class="active">Înțelegem viziunea și cerințele dumneavoastră în detaliu.</span><span data-lang="en">We understand your vision and requirements in detail.</span><span data-lang="ru">Детально изучаем вашу концепцию и требования.</span></p></div>
+      <div class="pstep reveal d1"><div class="pdot"><span class="pnum">02</span></div><h4 class="ptitle"><span data-lang="ro" class="active">Proiectare</span><span data-lang="en">Design</span><span data-lang="ru">Проектирование</span></h4><p class="pdesc"><span data-lang="ro" class="active">Elaborăm planuri detaliate și estimări precise de cost.</span><span data-lang="en">We develop detailed plans and precise cost estimates.</span><span data-lang="ru">Разрабатываем подробные планы и точные сметы.</span></p></div>
+      <div class="pstep reveal d2"><div class="pdot"><span class="pnum">03</span></div><h4 class="ptitle"><span data-lang="ro" class="active">Execuție</span><span data-lang="en">Execution</span><span data-lang="ru">Выполнение</span></h4><p class="pdesc"><span data-lang="ro" class="active">Construim cu precizie, respectând termenele și standardele.</span><span data-lang="en">We build with precision, respecting timelines and standards.</span><span data-lang="ru">Строим точно, соблюдая сроки и стандарты.</span></p></div>
+      <div class="pstep reveal d3"><div class="pdot"><span class="pnum">04</span></div><h4 class="ptitle"><span data-lang="ro" class="active">Predare</span><span data-lang="en">Handover</span><span data-lang="ru">Передача</span></h4><p class="pdesc"><span data-lang="ro" class="active">Predăm proiectul finalizat cu garanție și asistență post-livrare.</span><span data-lang="en">We hand over the finished project with warranty and after-service support.</span><span data-lang="ru">Передаём готовый объект с гарантией и поддержкой.</span></p></div>
     </div>
   </div>
 </section>
@@ -568,52 +417,34 @@ section{padding:100px 0}
 <!-- CONTACT -->
 <section id="contact">
   <div class="container">
-    <div style="text-align:center;margin-bottom:56px" class="reveal">
-      <div class="label" style="justify-content:center">
-        <span data-lang="ro" class="active">Luați Legătura</span>
-        <span data-lang="en">Get In Touch</span>
-        <span data-lang="ru">Свяжитесь с Нами</span>
-      </div>
-      <h2 class="section-title">
-        <span data-lang="ro" class="active">Contactați-ne</span>
-        <span data-lang="en">Contact Us</span>
-        <span data-lang="ru">Контакты</span>
-      </h2>
-      <p class="section-sub" style="margin:0 auto">
-        <span data-lang="ro" class="active">Suntem gata să discutăm despre proiectul dumneavoastră. Contactați-ne astăzi pentru o consultație gratuită.</span>
-        <span data-lang="en">We're ready to discuss your project. Contact us today for a free consultation.</span>
-        <span data-lang="ru">Готовы обсудить ваш проект. Свяжитесь с нами сегодня для бесплатной консультации.</span>
-      </p>
+    <div class="contact-head reveal">
+      <div class="stag"><span data-lang="ro" class="active">Luați Legătura</span><span data-lang="en">Get In Touch</span><span data-lang="ru">Свяжитесь с Нами</span></div>
+      <h2 class="stitle"><span data-lang="ro" class="active">Contactați-ne</span><span data-lang="en">Contact Us</span><span data-lang="ru">Контакты</span></h2>
+      <p class="ssub"><span data-lang="ro" class="active">Suntem gata să discutăm proiectul dumneavoastră. Contactați-ne pentru o consultație gratuită.</span><span data-lang="en">We're ready to discuss your project. Get in touch for a free consultation.</span><span data-lang="ru">Готовы обсудить ваш проект. Свяжитесь с нами для бесплатной консультации.</span></p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;max-width:900px;margin:0 auto" class="reveal">
-      <div class="contact-card">
-        <div class="citem-icon">
-          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </div>
-        <div class="citem-label"><span data-lang="ro" class="active">Adresă</span><span data-lang="en">Address</span><span data-lang="ru">Адрес</span></div>
-        <div class="citem-val">str. Ivan Zaikin, 51<br>Chișinău, MD2005</div>
+    <div class="cc-grid reveal d1">
+      <div class="cc">
+        <div class="cc-ico"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div class="cc-lbl"><span data-lang="ro" class="active">Adresă</span><span data-lang="en">Address</span><span data-lang="ru">Адрес</span></div>
+        <div class="cc-val">str. Zaikin, 51<br>Chișinău, MD-2005</div>
       </div>
-      <div class="contact-card">
-        <div class="citem-icon">
-          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .96h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        </div>
-        <div class="citem-label"><span data-lang="ro" class="active">Telefon</span><span data-lang="en">Phone</span><span data-lang="ru">Телефон</span></div>
-        <div class="citem-val"><a href="tel:+37360009003">+373 60 009 003</a></div>
+      <div class="cc">
+        <div class="cc-ico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .96h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+        <div class="cc-lbl"><span data-lang="ro" class="active">Telefon</span><span data-lang="en">Phone</span><span data-lang="ru">Телефон</span></div>
+        <div class="cc-val"><a href="tel:+37360009003">+373 60 009 003</a></div>
       </div>
-      <div class="contact-card">
-        <div class="citem-icon">
-          <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
-        </div>
-        <div class="citem-label">Email</div>
-        <div class="citem-val"><a href="mailto:greenengineering@gmail.com">greenengineering@gmail.com</a></div>
+      <div class="cc">
+        <div class="cc-ico"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg></div>
+        <div class="cc-lbl">Web</div>
+        <div class="cc-val"><a href="https://www.greenengineering.md" target="_blank">greenengineering.md</a></div>
       </div>
     </div>
-    <div style="text-align:center;margin-top:48px" class="reveal">
-      <a href="tel:+37360009003" class="btn btn-primary" style="font-size:15px;padding:16px 40px">
+    <div class="contact-cta reveal d2">
+      <a href="tel:+37360009003" class="btn btn-lime" style="font-size:13px;padding:14px 34px">
         <span data-lang="ro" class="active">Sunați Acum</span>
         <span data-lang="en">Call Us Now</span>
         <span data-lang="ru">Позвонить Сейчас</span>
-        &#8594;
+        &rarr;
       </a>
     </div>
   </div>
@@ -624,19 +455,23 @@ section{padding:100px 0}
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="#home" class="logo"><span>Green</span> Engineering</a>
-        <p>
-          <span data-lang="ro" class="active">Construim un viitor mai bun prin construcții de calitate și practici durabile în Republica Moldova.</span>
-          <span data-lang="en">Building a better future through quality construction and sustainable practices in the Republic of Moldova.</span>
-          <span data-lang="ru">Строим лучшее будущее через качественное строительство и устойчивые практики в Республике Молдова.</span>
-        </p>
+        <a href="#home" class="logo-block">
+          <svg style="width:30px;height:33px" viewBox="0 0 40 44" fill="none">
+            <path d="M20 2C12 2 5 8.5 5 17C5 23 8.5 28 14 30.5V40H26V30.5C31.5 28 35 23 35 17C35 8.5 28 2 20 2Z" fill="#8dc63f"/>
+            <line x1="20" y1="17" x2="14" y2="11" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="20" y1="17" x2="26" y2="11" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="20" y1="17" x2="20" y2="7"  stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+            <rect x="17.5" y="31" width="5" height="9" rx="1.5" fill="#8dc63f"/>
+          </svg>
+          <div class="logo-text">
+            <strong>Green Engineering</strong>
+            <em>idei și soluții</em>
+          </div>
+        </a>
+        <p><span data-lang="ro" class="active">Construim un viitor mai bun prin construcții de calitate și practici durabile în Republica Moldova.</span><span data-lang="en">Building a better future through quality construction and sustainable practices in Moldova.</span><span data-lang="ru">Строим лучшее будущее через качественное строительство и устойчивые практики в Молдове.</span></p>
       </div>
-      <div class="footer-col">
-        <h5>
-          <span data-lang="ro" class="active">Link-uri Rapide</span>
-          <span data-lang="en">Quick Links</span>
-          <span data-lang="ru">Быстрые Ссылки</span>
-        </h5>
+      <div class="fcol">
+        <h5><span data-lang="ro" class="active">Link-uri Rapide</span><span data-lang="en">Quick Links</span><span data-lang="ru">Быстрые Ссылки</span></h5>
         <ul>
           <li><a href="#home"><span data-lang="ro" class="active">Acasă</span><span data-lang="en">Home</span><span data-lang="ru">Главная</span></a></li>
           <li><a href="#services"><span data-lang="ro" class="active">Servicii</span><span data-lang="en">Services</span><span data-lang="ru">Услуги</span></a></li>
@@ -644,71 +479,49 @@ section{padding:100px 0}
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h5>
-          <span data-lang="ro" class="active">Servicii</span>
-          <span data-lang="en">Services</span>
-          <span data-lang="ru">Услуги</span>
-        </h5>
+      <div class="fcol">
+        <h5><span data-lang="ro" class="active">Servicii</span><span data-lang="en">Services</span><span data-lang="ru">Услуги</span></h5>
         <ul>
           <li><a href="#services"><span data-lang="ro" class="active">Construcții Rezidențiale</span><span data-lang="en">Residential</span><span data-lang="ru">Жилое Строительство</span></a></li>
-          <li><a href="#services"><span data-lang="ro" class="active">Clădiri Comerciale</span><span data-lang="en">Commercial</span><span data-lang="ru">Коммерческие Здания</span></a></li>
+          <li><a href="#services"><span data-lang="ro" class="active">Clădiri Comerciale</span><span data-lang="en">Commercial</span><span data-lang="ru">Коммерческое</span></a></li>
           <li><a href="#services"><span data-lang="ro" class="active">Renovare</span><span data-lang="en">Renovation</span><span data-lang="ru">Ремонт</span></a></li>
           <li><a href="#services"><span data-lang="ro" class="active">Ecologic</span><span data-lang="en">Eco Building</span><span data-lang="ru">Экостроительство</span></a></li>
         </ul>
       </div>
-      <div class="footer-col">
+      <div class="fcol">
         <h5>Contact</h5>
         <ul>
-          <li>str. Ivan Zaikin, 51</li>
-          <li>Chișinău, MD2005</li>
+          <li>S.R.L. Green Engineering</li>
+          <li>str. Zaikin, 51, Chișinău</li>
+          <li>MD-2005</li>
           <li><a href="tel:+37360009003">+373 60 009 003</a></li>
-          <li><a href="mailto:greenengineering@gmail.com">greenengineering@gmail.com</a></li>
+          <li><a href="mailto:greenengineering@outlook.com">greenengineering@outlook.com</a></li>
+          <li><a href="https://www.greenengineering.md" target="_blank">greenengineering.md</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2024 Green Engineering. <span data-lang="ro" class="active">Toate drepturile rezervate.</span><span data-lang="en">All rights reserved.</span><span data-lang="ru">Все права защищены.</span></p>
+      <p>&copy; 2024 S.R.L. Green Engineering. <span data-lang="ro" class="active">Toate drepturile rezervate.</span><span data-lang="en">All rights reserved.</span><span data-lang="ru">Все права защищены.</span></p>
+      <span class="footer-tagline">idei și soluții</span>
     </div>
   </div>
 </footer>
 
 <script>
-// ── LANG ──
-let currentLang = 'ro';
-function setLang(lang) {
-  currentLang = lang;
-  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+let currentLang='ro';
+function setLang(lang){
+  currentLang=lang;
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
   document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
-  document.querySelectorAll('[data-lang]').forEach(el => {
-    el.classList.toggle('active', el.dataset.lang === lang);
-  });
-  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-lang]').forEach(el=>el.classList.toggle('active',el.dataset.lang===lang));
+  document.documentElement.lang=lang;
 }
-
-// ── NAV SCROLL ──
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 60);
-});
-
-// ── MOBILE MENU ──
-function toggleMenu() {
-  document.getElementById('navLinks').classList.toggle('open');
-}
-document.querySelectorAll('.nav-links a').forEach(a => {
-  a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
-});
-
-// ── SCROLL REVEAL ──
-const reveals = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-}, { threshold: 0.12 });
-reveals.forEach(r => observer.observe(r));
-
-// ── FORM ──
-
+const navbar=document.getElementById('navbar');
+window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>60));
+function toggleMenu(){document.getElementById('navLinks').classList.toggle('open')}
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
+const observer=new IntersectionObserver((entries)=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(r=>observer.observe(r));
 </script>
 </body>
 </html>
