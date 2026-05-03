@@ -5,24 +5,58 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Green Engineering — idei și soluții. Servicii premium de construcții în Republica Moldova.">
 <title>Green Engineering — idei și soluții</title>
+
+<!-- === BRAND ASSETS (favicon set + PWA + social share) === -->
+<link rel="icon" type="image/x-icon" href="./favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+<link rel="manifest" href="./site.webmanifest">
+<meta name="theme-color" content="#C4D82E">
+<meta name="apple-mobile-web-app-title" content="Green Engineering">
+<meta name="application-name" content="Green Engineering">
+
+<!-- Open Graph / social share -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Green Engineering">
+<meta property="og:title" content="Green Engineering — idei și soluții">
+<meta property="og:description" content="Servicii premium de construcții în Republica Moldova.">
+<meta property="og:url" content="https://www.greenengineering.md/">
+<meta property="og:image" content="https://greenengineering.md/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ro_RO">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Green Engineering — idei și soluții">
+<meta name="twitter:description" content="Servicii premium de construcții în Republica Moldova.">
+<meta name="twitter:image" content="https://greenengineering.md/og-image.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin>
+<!-- Corporate font per brand book: TT Norms (Light / Light Italic / Medium / Bold) -->
+<link href="https://fonts.cdnfonts.com/css/tt-norms-pro" rel="stylesheet">
+<!-- Fallback close to TT Norms (geometric sans) -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --lime:#8dc63f;
-  --lime-dark:#70a030;
-  --lime-pale:#f0f8e6;
-  --lime-light:#d8eea8;
-  --near-black:#1a1a1a;
-  --dark:#111111;
-  --white:#ffffff;
-  --off-white:#f7f7f5;
-  --text:#1a1a1a;
-  --text-muted:#666666;
-  --border:#e2e2e2;
-  --ff:'Inter',system-ui,sans-serif;
+  /* === BRAND BOOK COLOURS (Green Engineering, 2021) === */
+  /* Primary: PANTONE 382 C — CMYK 30/0/100/0 */
+  --lime:#C4D82E;
+  --lime-dark:#9EB01F;
+  --lime-pale:#F5F9DC;
+  --lime-light:#DDE88A;
+  /* Secondary: PANTONE Black C — CMYK 0/0/0/90 */
+  --near-black:#1A1A1A;
+  --dark:#0F0F0F;
+  --white:#FFFFFF;
+  --off-white:#F7F8F2;
+  --text:#1A1A1A;
+  --text-muted:#5F5F5F;
+  --border:#E2E2E2;
+  /* Corporate typeface: TT Norms (brand book, p.7) */
+  --ff:'TT Norms Pro','TT Norms','Manrope',system-ui,-apple-system,'Segoe UI',sans-serif;
   --radius:3px;
   --radius-lg:10px;
   --shadow:0 2px 20px rgba(0,0,0,.07);
@@ -47,11 +81,16 @@ span[data-lang].active{display:inline}
 .navbar{position:fixed;top:38px;left:0;right:0;z-index:100;transition:all .3s}
 .navbar.scrolled{top:0;background:rgba(17,17,17,.97);backdrop-filter:blur(14px)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
-.logo-block{display:flex;align-items:center;gap:11px}
-.logo-svg{width:38px;height:38px;flex-shrink:0}
-.logo-text{display:flex;flex-direction:column;line-height:1}
-.logo-text strong{font-size:16px;font-weight:700;color:var(--white);letter-spacing:.01em;text-transform:uppercase}
-.logo-text em{font-size:10px;font-weight:300;font-style:normal;color:var(--lime);letter-spacing:.06em;margin-top:3px}
+/* === BRAND LOGO LOCKUP (per brand book, p.2) ===
+   Mark (tulip glyph) + tagline "idei și soluții" (TT Norms Light Italic) above
+   stacked wordmark "GREEN / ENGINEERING" (TT Norms Bold, uppercase). */
+.logo-block{display:flex;align-items:center;gap:11px;text-decoration:none;line-height:1}
+.logo-glyph{flex-shrink:0;height:38px;width:auto;display:block}
+.logo-words{display:flex;flex-direction:column;line-height:1}
+.logo-tag{font-family:var(--ff);font-size:10px;font-weight:300;font-style:italic;color:var(--lime);letter-spacing:.04em;margin-bottom:4px;white-space:nowrap}
+.logo-mark{display:flex;flex-direction:column;line-height:.92}
+.logo-mark span{font-family:var(--ff);font-weight:700;font-size:14px;color:var(--white);letter-spacing:.06em;text-transform:uppercase}
+.logo-mark span+span{margin-top:1px}
 .nav-links{display:flex;gap:30px;list-style:none;align-items:center}
 .nav-links a{color:rgba(255,255,255,.75);font-size:12px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;transition:color .2s;position:relative;padding-bottom:3px}
 .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:var(--lime);transition:width .22s}
@@ -71,7 +110,7 @@ span[data-lang].active{display:inline}
 .hero-wrap{position:relative;z-index:3;display:flex;flex-direction:column;justify-content:center;min-height:100vh;padding-top:130px;padding-bottom:90px}
 .hero-tag{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--lime);margin-bottom:30px;opacity:0;animation:fadeUp .6s .1s forwards}
 .hero-tag::before{content:'';display:block;width:26px;height:1px;background:var(--lime)}
-.hero-h1{font-size:clamp(40px,5.2vw,74px);font-weight:900;color:var(--white);line-height:1.04;letter-spacing:-.025em;opacity:0;animation:fadeUp .6s .22s forwards}
+.hero-h1{font-size:clamp(40px,5.2vw,74px);font-weight:700;color:var(--white);line-height:1.04;letter-spacing:-.018em;opacity:0;animation:fadeUp .6s .22s forwards}
 .hero-h1 span{color:var(--lime)}
 .hero-p{font-size:16px;font-weight:300;color:rgba(255,255,255,.6);max-width:460px;line-height:1.8;margin:24px 0 44px;opacity:0;animation:fadeUp .6s .38s forwards}
 .hero-btns{display:flex;gap:12px;flex-wrap:wrap;opacity:0;animation:fadeUp .6s .5s forwards;margin-bottom:70px}
@@ -83,14 +122,14 @@ span[data-lang].active{display:inline}
 .hero-stats{display:flex;border-top:1px solid rgba(255,255,255,.09);padding-top:38px;opacity:0;animation:fadeUp .6s .65s forwards}
 .hs{flex:1;padding:0 30px;border-left:1px solid rgba(255,255,255,.09)}
 .hs:first-child{border-left:none;padding-left:0}
-.hs-n{font-size:36px;font-weight:900;color:var(--lime);line-height:1;letter-spacing:-.02em}
+.hs-n{font-size:36px;font-weight:700;color:var(--lime);line-height:1;letter-spacing:-.02em}
 .hs-l{font-size:11px;font-weight:300;color:rgba(255,255,255,.4);margin-top:6px;letter-spacing:.04em}
 
 /* SECTIONS */
 section{padding:92px 0}
 .stag{display:inline-flex;align-items:center;gap:9px;font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--lime);margin-bottom:12px}
 .stag::before{content:'';display:block;width:18px;height:1.5px;background:var(--lime)}
-.stitle{font-size:clamp(26px,3.2vw,44px);font-weight:800;color:var(--dark);line-height:1.08;letter-spacing:-.022em;margin-bottom:12px}
+.stitle{font-size:clamp(26px,3.2vw,44px);font-weight:700;color:var(--dark);line-height:1.08;letter-spacing:-.018em;margin-bottom:12px}
 .ssub{font-size:15px;font-weight:300;color:var(--text-muted);max-width:520px;line-height:1.75}
 
 /* SERVICES */
@@ -99,7 +138,7 @@ section{padding:92px 0}
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
 .svc{background:var(--white);padding:38px 30px;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s;border-bottom:3px solid transparent}
 .svc:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-bottom-color:var(--lime)}
-.svc-n{font-size:42px;font-weight:900;color:var(--lime-pale);line-height:1;margin-bottom:16px;letter-spacing:-.02em;transition:color .22s}
+.svc-n{font-size:42px;font-weight:700;color:var(--lime-pale);line-height:1;margin-bottom:16px;letter-spacing:-.02em;transition:color .22s}
 .svc:hover .svc-n{color:var(--lime-light)}
 .svc-ico{width:44px;height:44px;background:var(--lime-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:background .22s}
 .svc-ico svg{width:19px;height:19px;stroke:var(--lime-dark);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
@@ -111,9 +150,14 @@ section{padding:92px 0}
 /* ABOUT */
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:76px;align-items:center}
 .about-visual{position:relative}
-.about-img{width:100%;aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;background:linear-gradient(140deg,#d8eea8 0%,#a8d870 50%,#70a030 100%);display:flex;align-items:center;justify-content:center}
+.about-img{width:100%;aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;background:var(--near-black);display:flex;align-items:center;justify-content:center;padding:48px;position:relative}
+.about-img::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 25%,rgba(196,216,46,.18) 0%,transparent 60%)}
+.about-emblem{display:flex;flex-direction:column;align-items:center;line-height:.95;position:relative;z-index:1}
+.about-emblem-glyph{width:55%;max-width:240px;height:auto;display:block;margin-bottom:28px;filter:drop-shadow(0 8px 32px rgba(196,216,46,.22))}
+.about-emblem-tag{font-family:var(--ff);font-style:italic;font-weight:300;font-size:clamp(13px,1.2vw,16px);margin-bottom:10px;letter-spacing:.04em;color:var(--lime)}
+.about-emblem-mark{font-family:var(--ff);font-weight:700;font-size:clamp(22px,2.6vw,34px);letter-spacing:.06em;text-transform:uppercase;color:var(--white);line-height:1.05}
 .about-badge{position:absolute;bottom:-20px;right:-20px;width:155px;height:155px;background:var(--near-black);border-radius:var(--radius-lg);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
-.badge-n{font-size:42px;font-weight:900;color:var(--lime);line-height:1;letter-spacing:-.02em}
+.badge-n{font-size:42px;font-weight:700;color:var(--lime);line-height:1;letter-spacing:-.02em}
 .badge-l{font-size:11px;font-weight:300;color:rgba(255,255,255,.55);margin-top:6px;line-height:1.4}
 .about-txt{font-size:15px;font-weight:300;color:var(--text-muted);line-height:1.85;margin-bottom:16px}
 .pillars{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:32px}
@@ -134,7 +178,7 @@ section{padding:92px 0}
 .pstep{text-align:center;padding:0 18px;position:relative;z-index:1}
 .pdot{width:66px;height:66px;border-radius:50%;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.03);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;transition:all .25s}
 .pstep:hover .pdot{background:var(--lime);border-color:var(--lime)}
-.pnum{font-size:19px;font-weight:800;color:rgba(255,255,255,.25);transition:color .25s;letter-spacing:-.01em}
+.pnum{font-size:19px;font-weight:700;color:rgba(255,255,255,.25);transition:color .25s;letter-spacing:-.01em}
 .pstep:hover .pnum{color:var(--dark)}
 .ptitle{font-size:14px;font-weight:700;color:var(--white);margin-bottom:9px;letter-spacing:-.01em}
 .pdesc{font-size:12px;font-weight:300;color:rgba(255,255,255,.38);line-height:1.7}
@@ -143,7 +187,7 @@ section{padding:92px 0}
 .contact-head{text-align:center;margin-bottom:48px}
 .contact-head .stag{justify-content:center}
 .contact-head .ssub{margin:0 auto}
-.cc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:840px;margin:0 auto}
+.cc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:1080px;margin:0 auto}
 .cc{background:var(--off-white);border-radius:var(--radius-lg);padding:34px 26px;text-align:center;transition:box-shadow .25s,transform .25s;border-bottom:2px solid transparent}
 .cc:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);border-bottom-color:var(--lime)}
 .cc-ico{width:48px;height:48px;border-radius:50%;background:var(--lime-pale);display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
@@ -181,7 +225,7 @@ section{padding:92px 0}
   .proc-steps::before{display:none}
   .footer-grid{grid-template-columns:1fr 1fr;gap:30px}
   .svc-grid{grid-template-columns:1fr 1fr}
-  .cc-grid{grid-template-columns:1fr}
+  .cc-grid{grid-template-columns:1fr 1fr}
   .hero-stats{display:none}
 }
 @media(max-width:620px){
@@ -191,6 +235,7 @@ section{padding:92px 0}
   .svc-grid{grid-template-columns:1fr}
   .proc-steps{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr}
+  .cc-grid{grid-template-columns:1fr}
   .hero-btns{flex-direction:column;align-items:flex-start}
 }
 </style>
@@ -210,18 +255,15 @@ section{padding:92px 0}
 <nav class="navbar" id="navbar">
   <div class="container">
     <div class="nav-inner">
-      <a href="#home" class="logo-block">
-        <svg class="logo-svg" viewBox="0 0 40 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M20 2C12 2 5 8.5 5 17C5 23 8.5 28 14 30.5V40H26V30.5C31.5 28 35 23 35 17C35 8.5 28 2 20 2Z" fill="#8dc63f"/>
-          <line x1="20" y1="17" x2="14" y2="11" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
-          <line x1="20" y1="17" x2="26" y2="11" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
-          <line x1="20" y1="17" x2="20" y2="7"  stroke="white" stroke-width="1.8" stroke-linecap="round"/>
-          <rect x="17.5" y="31" width="5" height="9" rx="1.5" fill="#8dc63f"/>
-        </svg>
-        <div class="logo-text">
-          <strong>Green Engineering</strong>
-          <em>idei și soluții</em>
-        </div>
+      <a href="#home" class="logo-block" aria-label="Green Engineering — idei și soluții">
+        <img class="logo-glyph" src="./assets/brand/logo-mark-color-transparent.png" alt="" width="42" height="50">
+        <span class="logo-words">
+          <span class="logo-tag">idei și soluții</span>
+          <span class="logo-mark">
+            <span>GREEN</span>
+            <span>ENGINEERING</span>
+          </span>
+        </span>
       </a>
       <ul class="nav-links" id="navLinks">
         <li>
@@ -368,13 +410,12 @@ section{padding:92px 0}
     <div class="about-grid">
       <div class="about-visual reveal">
         <div class="about-img">
-          <svg viewBox="0 0 100 120" fill="none" style="width:100px;opacity:.3">
-            <path d="M50 5C34 5 18 17 18 35C18 47 24 57 34 63L34 90L66 90L66 63C76 57 82 47 82 35C82 17 66 5 50 5Z" fill="white"/>
-            <line x1="50" y1="35" x2="38" y2="23" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-            <line x1="50" y1="35" x2="62" y2="23" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-            <line x1="50" y1="35" x2="50" y2="14" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-            <rect x="44" y="70" width="12" height="20" rx="3" fill="white" opacity=".7"/>
-          </svg>
+          <div class="about-emblem" aria-hidden="true">
+            <img class="about-emblem-glyph" src="./assets/brand/logo-mark-color-transparent.png" alt="">
+            <span class="about-emblem-tag">idei și soluții</span>
+            <span class="about-emblem-mark">GREEN</span>
+            <span class="about-emblem-mark">ENGINEERING</span>
+          </div>
         </div>
         <div class="about-badge">
           <div class="badge-n">15+</div>
@@ -434,6 +475,11 @@ section{padding:92px 0}
         <div class="cc-val"><a href="tel:+37360009003">+373 60 009 003</a></div>
       </div>
       <div class="cc">
+        <div class="cc-ico"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <div class="cc-lbl">Email</div>
+        <div class="cc-val"><a href="mailto:greenengineering@outlook.com">greenengineering@<br>outlook.com</a></div>
+      </div>
+      <div class="cc">
         <div class="cc-ico"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg></div>
         <div class="cc-lbl">Web</div>
         <div class="cc-val"><a href="https://www.greenengineering.md" target="_blank">greenengineering.md</a></div>
@@ -455,18 +501,15 @@ section{padding:92px 0}
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="#home" class="logo-block">
-          <svg style="width:30px;height:33px" viewBox="0 0 40 44" fill="none">
-            <path d="M20 2C12 2 5 8.5 5 17C5 23 8.5 28 14 30.5V40H26V30.5C31.5 28 35 23 35 17C35 8.5 28 2 20 2Z" fill="#8dc63f"/>
-            <line x1="20" y1="17" x2="14" y2="11" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
-            <line x1="20" y1="17" x2="26" y2="11" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
-            <line x1="20" y1="17" x2="20" y2="7"  stroke="white" stroke-width="1.8" stroke-linecap="round"/>
-            <rect x="17.5" y="31" width="5" height="9" rx="1.5" fill="#8dc63f"/>
-          </svg>
-          <div class="logo-text">
-            <strong>Green Engineering</strong>
-            <em>idei și soluții</em>
-          </div>
+        <a href="#home" class="logo-block" aria-label="Green Engineering — idei și soluții">
+          <img class="logo-glyph" src="./assets/brand/logo-mark-color-transparent.png" alt="" width="42" height="50">
+          <span class="logo-words">
+            <span class="logo-tag">idei și soluții</span>
+            <span class="logo-mark">
+              <span>GREEN</span>
+              <span>ENGINEERING</span>
+            </span>
+          </span>
         </a>
         <p><span data-lang="ro" class="active">Construim un viitor mai bun prin construcții de calitate și practici durabile în Republica Moldova.</span><span data-lang="en">Building a better future through quality construction and sustainable practices in Moldova.</span><span data-lang="ru">Строим лучшее будущее через качественное строительство и устойчивые практики в Молдове.</span></p>
       </div>
